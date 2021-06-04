@@ -1,0 +1,44 @@
+<testsuite failures="0" name="src/test/java/com/wellsfargo/featurefiles/Karate12_rest_DDD.feature" skipped="0" tests="3" time="3.616955">
+  <testcase classname="src.test.java.com.wellsfargo.featurefiles.Karate12_rest_DDD" name="Rest TestCase 2" time="2.816854">
+    <system-out>Given url "https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit" . passed
+And header Content-Type = "application/x-www-form-urlencoded" ............. passed
+And request "Celsius=40" .................................................. passed
+When method post .......................................................... passed
+Then status 200 ........................................................... passed
+* match response //string == "104" ........................................ passed</system-out>
+  </testcase>
+  <testcase classname="src.test.java.com.wellsfargo.featurefiles.Karate12_rest_DDD" name="Rest TestCase 2" time="0.406699">
+    <system-out>Given url "https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit" . passed
+And header Content-Type = "application/x-www-form-urlencoded" ............. passed
+And request "Celsius=40" .................................................. passed
+When method post .......................................................... passed
+Then status 200 ........................................................... passed
+* match response //string == "104" ........................................ passed
+Given url "https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit" . passed
+And header Content-Type = "application/x-www-form-urlencoded" ............. passed
+And request "Celsius=37" .................................................. passed
+When method post .......................................................... passed
+Then status 200 ........................................................... passed
+* match response //string == "98.6" ....................................... passed</system-out>
+  </testcase>
+  <testcase classname="src.test.java.com.wellsfargo.featurefiles.Karate12_rest_DDD" name="Rest TestCase 2" time="0.393402">
+    <system-out>Given url "https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit" . passed
+And header Content-Type = "application/x-www-form-urlencoded" ............. passed
+And request "Celsius=40" .................................................. passed
+When method post .......................................................... passed
+Then status 200 ........................................................... passed
+* match response //string == "104" ........................................ passed
+Given url "https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit" . passed
+And header Content-Type = "application/x-www-form-urlencoded" ............. passed
+And request "Celsius=37" .................................................. passed
+When method post .......................................................... passed
+Then status 200 ........................................................... passed
+* match response //string == "98.6" ....................................... passed
+Given url "https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit" . passed
+And header Content-Type = "application/x-www-form-urlencoded" ............. passed
+And request "Celsius=abc" ................................................. passed
+When method post .......................................................... passed
+Then status 200 ........................................................... passed
+* match response //string == "Error" ...................................... passed</system-out>
+  </testcase>
+</testsuite>

@@ -1,0 +1,64 @@
+<testsuite failures="0" name="src/test/java/com/wellsfargo/featurefiles/Karate18_DBInteractions.feature" skipped="0" tests="4" time="2.331387">
+  <testcase classname="src.test.java.com.wellsfargo.featurefiles.Karate18_DBInteractions" name="select stmt TestCase 1" time="1.815343">
+    <system-out>* def db = Java.type('com.wellsfargo.utils.MyDBUtils') .................... passed
+* def rows = db.selectStatement("select * from tools") .................... passed
+* print rows .............................................................. passed</system-out>
+  </testcase>
+  <testcase classname="src.test.java.com.wellsfargo.featurefiles.Karate18_DBInteractions" name="insert stmt TestCase 2" time="0.22966">
+    <system-out>* def db = Java.type('com.wellsfargo.utils.MyDBUtils') .................... passed
+* def rows = db.selectStatement("select * from tools") .................... passed
+* print rows .............................................................. passed
+* def db = Java.type('com.wellsfargo.utils.MyDBUtils') .................... passed
+* def result = db.insertStatement("Insert into tools values(2117,'java211','python')") . passed
+* print result ............................................................ passed
+* match result == "Success" ............................................... passed
+* def rows = db.selectStatement("select * from tools where toolid=2117 ") . passed
+* print rows .............................................................. passed
+* match rows contains "java211" ........................................... passed</system-out>
+  </testcase>
+  <testcase classname="src.test.java.com.wellsfargo.featurefiles.Karate18_DBInteractions" name="update stmt TestCase 3" time="0.171973">
+    <system-out>* def db = Java.type('com.wellsfargo.utils.MyDBUtils') .................... passed
+* def rows = db.selectStatement("select * from tools") .................... passed
+* print rows .............................................................. passed
+* def db = Java.type('com.wellsfargo.utils.MyDBUtils') .................... passed
+* def result = db.insertStatement("Insert into tools values(2117,'java211','python')") . passed
+* print result ............................................................ passed
+* match result == "Success" ............................................... passed
+* def rows = db.selectStatement("select * from tools where toolid=2117 ") . passed
+* print rows .............................................................. passed
+* match rows contains "java211" ........................................... passed
+* def db = Java.type('com.wellsfargo.utils.MyDBUtils') .................... passed
+* def rowseffected = db.updateStatement("update tools set toolname='Mounika' where toolid=2117") . passed
+* print rowseffected ...................................................... passed
+* assert rowseffected &gt;= 1 ................................................ passed
+* def rows = db.selectStatement("select * from tools where toolid=2117 ") . passed
+* print rows .............................................................. passed
+* match rows contains "Mounika" ........................................... passed</system-out>
+  </testcase>
+  <testcase classname="src.test.java.com.wellsfargo.featurefiles.Karate18_DBInteractions" name="delete stmt TestCase 3" time="0.11441">
+    <system-out>* def db = Java.type('com.wellsfargo.utils.MyDBUtils') .................... passed
+* def rows = db.selectStatement("select * from tools") .................... passed
+* print rows .............................................................. passed
+* def db = Java.type('com.wellsfargo.utils.MyDBUtils') .................... passed
+* def result = db.insertStatement("Insert into tools values(2117,'java211','python')") . passed
+* print result ............................................................ passed
+* match result == "Success" ............................................... passed
+* def rows = db.selectStatement("select * from tools where toolid=2117 ") . passed
+* print rows .............................................................. passed
+* match rows contains "java211" ........................................... passed
+* def db = Java.type('com.wellsfargo.utils.MyDBUtils') .................... passed
+* def rowseffected = db.updateStatement("update tools set toolname='Mounika' where toolid=2117") . passed
+* print rowseffected ...................................................... passed
+* assert rowseffected &gt;= 1 ................................................ passed
+* def rows = db.selectStatement("select * from tools where toolid=2117 ") . passed
+* print rows .............................................................. passed
+* match rows contains "Mounika" ........................................... passed
+* def db = Java.type('com.wellsfargo.utils.MyDBUtils') .................... passed
+* def rowseffected = db.deleteStatement("delete from tools where toolid=2117") . passed
+* print rowseffected ...................................................... passed
+* assert rowseffected &gt;= 1 ................................................ passed
+* def rows = db.selectStatement("select * from tools where toolid=2117 ") . passed
+* print rows .............................................................. passed
+* match rows !contains "Mounika" .......................................... passed</system-out>
+  </testcase>
+</testsuite>

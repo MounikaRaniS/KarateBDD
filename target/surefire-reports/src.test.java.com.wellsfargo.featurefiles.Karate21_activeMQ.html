@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+<meta charset="utf-8">
+    
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    
+<link href="res/bootstrap.min.css" rel="stylesheet" type="text/css">
+    
+<link href="res/karate-report.css" rel="stylesheet" type="text/css">
+    
+<link href="favicon.ico" rel="shortcut icon">
+    
+<script src="res/jquery.min.js" type="text/javascript"></script>
+    <script src="res/jquery.tablesorter.min.js" type="text/javascript"></script>
+    <script src="res/bootstrap.min.js" type="text/javascript"></script>
+    <script src="res/karate-report.js" type="text/javascript"></script>
+    
+<title>src.test.java.com.wellsfargo.featurefiles.Karate21_activeMQ</title>
+  
+</head>
+  
+<body>
+    
+<div id="root-container">
+      
+<div id="leftnav">
+        
+<div class="nav-logo">
+          
+<a href="karate-summary.html">
+            <img alt="Karate" src="res/karate-logo.svg">
+          </a>
+          
+<div class="nav-count">
+            
+<div class="bg-success" id="nav-pass">0</div>
+            
+<div class="bg-danger" id="nav-fail">1</div>
+          
+</div>
+        
+</div>
+        
+<div id="nav-type">Scenarios</div>         
+        
+<div id="nav-date">2021-06-04 02:02:28 PM</div>        
+      
+<div class="nav-container">
+<div class="nav-item failed">
+<a href="#[1:33]">[1:33] Producing &amp; Consuming Message </a>
+</div>
+</div>
+</div>
+      
+<div id="content">
+      
+<div class="page-heading alert alert-primary">
+<a href="karate-summary.html">Summary</a><span class="feature-label">|</span><a href="karate-tags.html">Tags</a><span class="feature-label">|</span><span class="feature-label">Feature:</span><span class="feature-name">src/test/java/com/wellsfargo/featurefiles/Karate21_activeMQ.feature</span><span class="feature-description">JMS REST API - Test Suite 21 | interacting with JMS - ActiveMQ Server - with producing &amp; consuming message</span>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[1:33]">
+<div class="heading-container">
+<div class="scenario-tags"></div>
+<span class="scenario-keyword">Scenario: [1:33]</span><span class="scenario-name">Producing &amp; Consuming Message </span>
+</div>
+<div class="scenario-time failed">ms: 2390</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="[1:33]bg">
+<div class="step-ref bg-step">&gt;&gt;</div>
+<div class="step-cell passed">Background:</div>
+</div>
+<div class="time-cell passed"></div>
+</div>
+<div class="step-row" data-parent="[1:33]bg">
+<div class="step-container" id="1">
+<div class="step-ref bg-step">1</div>
+<div class="step-cell passed">* def login =</div>
+</div>
+<div class="time-cell passed">47</div>
+</div>
+<div class="preformatted" data-parent="1">function(uid, pwd) {
+    var temp = uid + ':' + pwd;
+    var Base64 = Java.type('java.util.Base64');
+    var encoded = Base64.getEncoder().encodeToString(temp.bytes);
+    return 'Basic ' + encoded;
+}
+14:02:25.851 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js</div>
+<div class="step-row" data-parent="[1:33]bg">
+<div class="step-container" id="2">
+<div class="step-ref bg-step">2</div>
+<div class="step-cell passed">* def waitForMiliseconds =</div>
+</div>
+<div class="time-cell passed">12</div>
+</div>
+<div class="preformatted" data-parent="2">function(pause){ java.lang.Thread.sleep(pause) }</div>
+<div class="step-row" data-parent="[1:33]bg">
+<div class="step-container" id="3">
+<div class="step-ref bg-step">3</div>
+<div class="step-cell passed">* def auth = login("admin", "admin")</div>
+</div>
+<div class="time-cell passed">108</div>
+</div>
+<div class="step-row" data-parent="[1:33]bg">
+<div class="step-container" id="4">
+<div class="step-ref bg-step">4</div>
+<div class="step-cell passed">* print auth</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="preformatted" data-parent="4">14:02:26.237 [print] Basic YWRtaW46YWRtaW4=</div>
+<div class="step-row" data-parent="[1:33]bg">
+<div class="step-container" id="5">
+<div class="step-ref bg-step">5</div>
+<div class="step-cell passed">* configure ssl = false</div>
+</div>
+<div class="time-cell passed">10</div>
+</div>
+<div class="step-row" data-parent="[1:33]bg">
+<div class="step-container">
+<div class="step-ref bg-step"></div>
+<div class="step-cell comment">#* configure cookies = null</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row" data-parent="[1:33]bg">
+<div class="step-container" id="6">
+<div class="step-ref bg-step">6</div>
+<div class="step-cell passed">* configure followRedirects = false</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="step-row" data-parent="[1:33]bg">
+<div class="step-container" id="7">
+<div class="step-ref bg-step">7</div>
+<div class="step-cell passed">Given url "http://10.0.0.60:8161"</div>
+</div>
+<div class="time-cell passed">8</div>
+</div>
+<div class="step-row" data-parent="[1:33]bg">
+<div class="step-container" id="8">
+<div class="step-ref bg-step">8</div>
+<div class="step-cell passed">And header Authorization = auth</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="9">
+<div class="step-ref passed">9</div>
+<div class="step-cell passed">Given path "/api/message"</div>
+</div>
+<div class="time-cell passed">9</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="10">
+<div class="step-ref passed">10</div>
+<div class="step-cell passed">And param destination = "queue://Mounika.input"</div>
+</div>
+<div class="time-cell passed">8</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="11">
+<div class="step-ref passed">11</div>
+<div class="step-cell passed">And header Connection = "Keep-Alive"</div>
+</div>
+<div class="time-cell passed">6</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="12">
+<div class="step-ref passed">12</div>
+<div class="step-cell passed">And request "Hi, Karate - Welcome to JMS"</div>
+</div>
+<div class="time-cell passed">6</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="13">
+<div class="step-ref failed">13</div>
+<div class="step-cell failed">When method post</div>
+</div>
+<div class="time-cell failed">2174</div>
+</div>
+<div class="preformatted" data-parent="13">14:02:27.391 request:
+1 &gt; POST http://10.0.0.60:8161/api/message?destination=queue%3A%2F%2FMounika.input
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Authorization: Basic YWRtaW46YWRtaW4=
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 27
+1 &gt; Content-Type: text/plain; charset=UTF-8
+1 &gt; Host: 10.0.0.60:8161
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_251)
+Hi, Karate - Welcome to JMS
+
+14:02:28.467 org.apache.http.conn.HttpHostConnectException: Connect to 10.0.0.60:8161 [/10.0.0.60] failed: Connection refused: connect, http call failed after 1074 milliseconds for URL: http://10.0.0.60:8161/api/message?destination=queue%3A%2F%2FMounika.input
+14:02:28.467 http request failed: 
+org.apache.http.conn.HttpHostConnectException: Connect to 10.0.0.60:8161 [/10.0.0.60] failed: Connection refused: connect
+Karate21_activeMQ.feature:38 - 
+org.apache.http.conn.HttpHostConnectException: Connect to 10.0.0.60:8161 [/10.0.0.60] failed: Connection refused: connect</div>
+<div class="step-row">
+<div class="step-container" id="14">
+<div class="step-ref skipped">14</div>
+<div class="step-cell skipped">Then status 200</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref skipped"></div>
+<div class="step-cell comment">#* assert responseTime &lt;= 3000</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container" id="15">
+<div class="step-ref skipped">15</div>
+<div class="step-cell skipped">* print responseCookies</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="16">
+<div class="step-ref skipped">16</div>
+<div class="step-cell skipped">* def cookieJSId = responseCookies.JSESSIONID</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="17">
+<div class="step-ref skipped">17</div>
+<div class="step-cell skipped">* print cookieJSId</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref skipped"></div>
+<div class="step-cell comment"># http://192.168.1.92:8161/api/message/orders.input?type=queue</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container" id="18">
+<div class="step-ref skipped">18</div>
+<div class="step-cell skipped">* waitForMiliseconds(1000)</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref skipped"></div>
+<div class="step-cell comment"># ************************* Consuming message starts here ***************************</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container" id="19">
+<div class="step-ref skipped">19</div>
+<div class="step-cell skipped">Given path "/api/message/Mounika.input"</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="20">
+<div class="step-ref skipped">20</div>
+<div class="step-cell skipped">And param type = "queue"</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="21">
+<div class="step-ref skipped">21</div>
+<div class="step-cell skipped">And cookie JSESSIONID = cookieJSId</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="22">
+<div class="step-ref skipped">22</div>
+<div class="step-cell skipped">And header Accept-Language = "en-US,en;q=0.9"</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="23">
+<div class="step-ref skipped">23</div>
+<div class="step-cell skipped">And header Accept-Encoding = "gzip, deflate"</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="24">
+<div class="step-ref skipped">24</div>
+<div class="step-cell skipped">And header Authorization = auth</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="25">
+<div class="step-ref skipped">25</div>
+<div class="step-cell skipped">And header Connection = "Keep-Alive"</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="26">
+<div class="step-ref skipped">26</div>
+<div class="step-cell skipped">And header Accept = "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="27">
+<div class="step-ref skipped">27</div>
+<div class="step-cell skipped">And header Cache-Control = "max-age=0"</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="28">
+<div class="step-ref skipped">28</div>
+<div class="step-cell skipped">And header User-Agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36"</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="29">
+<div class="step-ref skipped">29</div>
+<div class="step-cell skipped">And header Upgrade-Insecure-Requests = 1</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="30">
+<div class="step-ref skipped">30</div>
+<div class="step-cell skipped">When method get</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="31">
+<div class="step-ref skipped">31</div>
+<div class="step-cell skipped">Then status 200</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="32">
+<div class="step-ref skipped">32</div>
+<div class="step-cell skipped">* print responseType</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="33">
+<div class="step-ref skipped">33</div>
+<div class="step-cell skipped">* print response</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="34">
+<div class="step-ref skipped">34</div>
+<div class="step-cell skipped">* match response contains "Hi, Karate - Welcome to JMS"</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+</div>
+</div>
+    
+</div>   
+  
+</body>
+
+</html>

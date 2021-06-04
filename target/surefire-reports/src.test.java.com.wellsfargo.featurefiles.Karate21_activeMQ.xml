@@ -1,0 +1,44 @@
+<testsuite failures="1" name="src/test/java/com/wellsfargo/featurefiles/Karate21_activeMQ.feature" skipped="0" tests="1" time="2.39031">
+  <testcase classname="src.test.java.com.wellsfargo.featurefiles.Karate21_activeMQ" name="Producing &amp; Consuming Message" time="2.39031">
+    <failure message="Karate21_activeMQ.feature:38 - &#10;org.apache.http.conn.HttpHostConnectException: Connect to 10.0.0.60:8161 [/10.0.0.60] failed: Connection refused: connect">* def login = ............................................................. passed
+* def waitForMiliseconds = ................................................ passed
+* def auth = login("admin", "admin") ...................................... passed
+* print auth .............................................................. passed
+* configure ssl = false ................................................... passed
+* configure followRedirects = false ....................................... passed
+Given url "http://10.0.0.60:8161" ......................................... passed
+And header Authorization = auth ........................................... passed
+Given path "/api/message" ................................................. passed
+And param destination = "queue://Mounika.input" ........................... passed
+And header Connection = "Keep-Alive" ...................................... passed
+And request "Hi, Karate - Welcome to JMS" ................................. passed
+When method post .......................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: Karate21_activeMQ.feature:38 - 
+org.apache.http.conn.HttpHostConnectException: Connect to 10.0.0.60:8161 [/10.0.0.60] failed: Connection refused: connect&#13;
+	at ✽.When method post (Karate21_activeMQ.feature:38)&#13;
+
+Then status 200 ........................................................... skipped
+* print responseCookies ................................................... skipped
+* def cookieJSId = responseCookies.JSESSIONID ............................. skipped
+* print cookieJSId ........................................................ skipped
+* waitForMiliseconds(1000) ................................................ skipped
+Given path "/api/message/Mounika.input" ................................... skipped
+And param type = "queue" .................................................. skipped
+And cookie JSESSIONID = cookieJSId ........................................ skipped
+And header Accept-Language = "en-US,en;q=0.9" ............................. skipped
+And header Accept-Encoding = "gzip, deflate" .............................. skipped
+And header Authorization = auth ........................................... skipped
+And header Connection = "Keep-Alive" ...................................... skipped
+And header Accept = "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9" . skipped
+And header Cache-Control = "max-age=0" .................................... skipped
+And header User-Agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36" . skipped
+And header Upgrade-Insecure-Requests = 1 .................................. skipped
+When method get ........................................................... skipped
+Then status 200 ........................................................... skipped
+* print responseType ...................................................... skipped
+* print response .......................................................... skipped
+* match response contains "Hi, Karate - Welcome to JMS" ................... skipped</failure>
+  </testcase>
+</testsuite>

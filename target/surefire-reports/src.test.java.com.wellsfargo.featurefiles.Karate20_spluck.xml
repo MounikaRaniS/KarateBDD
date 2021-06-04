@@ -1,0 +1,18 @@
+<testsuite failures="0" name="src/test/java/com/wellsfargo/featurefiles/Karate20_spluck.feature" skipped="0" tests="1" time="1.961575">
+  <testcase classname="src.test.java.com.wellsfargo.featurefiles.Karate20_spluck" name="splunk TestCase 3" time="1.961575">
+    <system-out>* def login = ............................................................. passed
+* def auth = login("palmetoadmin", "P@lmeto@123") ......................... passed
+* print auth .............................................................. passed
+* configure ssl = true .................................................... passed
+Given url "https://10.0.0.60:8089" ........................................ passed
+And header Authorization = auth ........................................... passed
+Given path "/services/alerts/fired_alerts" ................................ passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+* def res = get response /feed/entry/content/dict/key/dict/key[@name='app'] . passed
+* def res1 = get response //dict/key[@name='app'] ......................... passed
+* print res ............................................................... passed
+* match res == "search" ................................................... passed
+* print res1 .............................................................. passed</system-out>
+  </testcase>
+</testsuite>

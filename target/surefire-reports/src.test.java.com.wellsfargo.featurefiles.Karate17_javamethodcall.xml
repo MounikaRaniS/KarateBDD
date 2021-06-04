@@ -1,0 +1,18 @@
+<testsuite failures="1" name="src/test/java/com/wellsfargo/featurefiles/Karate17_javamethodcall.feature" skipped="0" tests="1" time="0.182774">
+  <testcase classname="src.test.java.com.wellsfargo.featurefiles.Karate17_javamethodcall" name="java method call test case 2" time="0.182774">
+    <failure message="Karate17_javamethodcall.feature:34 - evaluation (js) failed: function()&#10;{&#10;var a = new() Java.type('com.wellsfargo.utils.BDDUtil')&#10;return a.getNonStaticMethod();&#10;}, javax.script.ScriptException: &lt;eval&gt;:3:12 Expected an operand but found )&#13;&#10;var a = new() Java.type('com.wellsfargo.utils.BDDUtil')&#13;&#10;            ^ in &lt;eval&gt; at line number 3 at column number 12&#10;stack trace: jdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:470)">* def result1 = ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: Karate17_javamethodcall.feature:34 - evaluation (js) failed: function()
+{
+var a = new() Java.type('com.wellsfargo.utils.BDDUtil')
+return a.getNonStaticMethod();
+}, javax.script.ScriptException: &lt;eval&gt;:3:12 Expected an operand but found )&#13;
+var a = new() Java.type('com.wellsfargo.utils.BDDUtil')&#13;
+            ^ in &lt;eval&gt; at line number 3 at column number 12
+stack trace: jdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:470)&#13;
+	at ✽.* def result1 = (Karate17_javamethodcall.feature:34)&#13;
+
+* print result1() ......................................................... skipped</failure>
+  </testcase>
+</testsuite>

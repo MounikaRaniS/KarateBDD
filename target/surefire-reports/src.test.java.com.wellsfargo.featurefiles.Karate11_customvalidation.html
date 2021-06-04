@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+<meta charset="utf-8">
+    
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    
+<link href="res/bootstrap.min.css" rel="stylesheet" type="text/css">
+    
+<link href="res/karate-report.css" rel="stylesheet" type="text/css">
+    
+<link href="favicon.ico" rel="shortcut icon">
+    
+<script src="res/jquery.min.js" type="text/javascript"></script>
+    <script src="res/jquery.tablesorter.min.js" type="text/javascript"></script>
+    <script src="res/bootstrap.min.js" type="text/javascript"></script>
+    <script src="res/karate-report.js" type="text/javascript"></script>
+    
+<title>src.test.java.com.wellsfargo.featurefiles.Karate11_customvalidation</title>
+  
+</head>
+  
+<body>
+    
+<div id="root-container">
+      
+<div id="leftnav">
+        
+<div class="nav-logo">
+          
+<a href="karate-summary.html">
+            <img alt="Karate" src="res/karate-logo.svg">
+          </a>
+          
+<div class="nav-count">
+            
+<div class="bg-success" id="nav-pass">5</div>
+            
+<div class="bg-danger" id="nav-fail">0</div>
+          
+</div>
+        
+</div>
+        
+<div id="nav-type">Scenarios</div>         
+        
+<div id="nav-date">2021-06-01 06:13:20 PM</div>        
+      
+<div class="nav-container">
+<div class="nav-item passed">
+<a href="#[1:5]">[1:5] Rest TestCase 1 This is for custom validation using logical and validaton</a>
+</div>
+<div class="nav-item passed">
+<a href="#[2:13]">[2:13] Rest TestCase 2 This is for custom validation using logical  or validaton</a>
+</div>
+<div class="nav-item passed">
+<a href="#[3:20]">[3:20] Rest TestCase 3 This is for custom validation using logical  not validaton</a>
+</div>
+<div class="nav-item passed">
+<a href="#[4:27]">[4:27] Rest TestCase 4 This is for custom validation using matchers(data types)</a>
+</div>
+<div class="nav-item passed">
+<a href="#[5:37]">[5:37] Rest TestCase 5 This is for custom validation using matchers(Regular expression)</a>
+</div>
+</div>
+</div>
+      
+<div id="content">
+      
+<div class="page-heading alert alert-primary">
+<a href="karate-summary.html">Summary</a><span class="feature-label">|</span><a href="karate-tags.html">Tags</a><span class="feature-label">|</span><span class="feature-label">Feature:</span><span class="feature-name">src/test/java/com/wellsfargo/featurefiles/Karate11_customvalidation.feature</span><span class="feature-description">Karate Test Suite 11 | This test suite for custom validations</span>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[1:5]">
+<div class="heading-container">
+<div class="scenario-tags"></div>
+<span class="scenario-keyword">Scenario: [1:5]</span><span class="scenario-name">Rest TestCase 1 This is for custom validation using logical and validaton</span>
+</div>
+<div class="scenario-time passed">ms: 199</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="1">
+<div class="step-ref passed">1</div>
+<div class="step-cell passed">* def a = 12</div>
+</div>
+<div class="time-cell passed">18</div>
+</div>
+<div class="preformatted" data-parent="1">18:13:19.826 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js</div>
+<div class="step-row">
+<div class="step-container" id="2">
+<div class="step-ref passed">2</div>
+<div class="step-cell passed">* def b = 23</div>
+</div>
+<div class="time-cell passed">10</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="3">
+<div class="step-ref passed">3</div>
+<div class="step-cell passed">* assert a == 12 &amp;&amp; b  == 23</div>
+</div>
+<div class="time-cell passed">171</div>
+</div>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[2:13]">
+<div class="heading-container">
+<div class="scenario-tags"></div>
+<span class="scenario-keyword">Scenario: [2:13]</span><span class="scenario-name">Rest TestCase 2 This is for custom validation using logical  or validaton</span>
+</div>
+<div class="scenario-time passed">ms: 13</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="4">
+<div class="step-ref passed">4</div>
+<div class="step-cell passed">* def a = 12</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="preformatted" data-parent="4">18:13:20.100 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js</div>
+<div class="step-row">
+<div class="step-container" id="5">
+<div class="step-ref passed">5</div>
+<div class="step-cell passed">* def b = 23</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="6">
+<div class="step-ref passed">6</div>
+<div class="step-cell passed">* assert a == 12 || b  == 2</div>
+</div>
+<div class="time-cell passed">12</div>
+</div>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[3:20]">
+<div class="heading-container">
+<div class="scenario-tags"></div>
+<span class="scenario-keyword">Scenario: [3:20]</span><span class="scenario-name">Rest TestCase 3 This is for custom validation using logical  not validaton</span>
+</div>
+<div class="scenario-time passed">ms: 16</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="7">
+<div class="step-ref passed">7</div>
+<div class="step-cell passed">* def a = 12</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="preformatted" data-parent="7">18:13:20.141 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js</div>
+<div class="step-row">
+<div class="step-container" id="8">
+<div class="step-ref passed">8</div>
+<div class="step-cell passed">* def b = 23</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="9">
+<div class="step-ref passed">9</div>
+<div class="step-cell passed">* assert a != 1</div>
+</div>
+<div class="time-cell passed">14</div>
+</div>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[4:27]">
+<div class="heading-container">
+<div class="scenario-tags"></div>
+<span class="scenario-keyword">Scenario: [4:27]</span><span class="scenario-name">Rest TestCase 4 This is for custom validation using matchers(data types)</span>
+</div>
+<div class="scenario-time passed">ms: 39</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="10">
+<div class="step-ref passed">10</div>
+<div class="step-cell passed">* def a = 12</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="10">18:13:20.177 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js</div>
+<div class="step-row">
+<div class="step-container" id="11">
+<div class="step-ref passed">11</div>
+<div class="step-cell passed">* def b = "test data"</div>
+</div>
+<div class="time-cell passed">7</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="12">
+<div class="step-ref passed">12</div>
+<div class="step-cell passed">* def c = true</div>
+</div>
+<div class="time-cell passed">8</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="13">
+<div class="step-ref passed">13</div>
+<div class="step-cell passed">* match a == "#number"</div>
+</div>
+<div class="time-cell passed">11</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="14">
+<div class="step-ref passed">14</div>
+<div class="step-cell passed">* match b == "#string"</div>
+</div>
+<div class="time-cell passed">7</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="15">
+<div class="step-ref passed">15</div>
+<div class="step-cell passed">* match c == "#boolean"</div>
+</div>
+<div class="time-cell passed">6</div>
+</div>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[5:37]">
+<div class="heading-container">
+<div class="scenario-tags"></div>
+<span class="scenario-keyword">Scenario: [5:37]</span><span class="scenario-name">Rest TestCase 5 This is for custom validation using matchers(Regular expression)</span>
+</div>
+<div class="scenario-time passed">ms: 162</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="16">
+<div class="step-ref passed">16</div>
+<div class="step-cell passed">* def a = "12"</div>
+</div>
+<div class="time-cell passed">10</div>
+</div>
+<div class="preformatted" data-parent="16">18:13:20.244 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js</div>
+<div class="step-row">
+<div class="step-container" id="17">
+<div class="step-ref passed">17</div>
+<div class="step-cell passed">* def b = "1002.23"</div>
+</div>
+<div class="time-cell passed">14</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="18">
+<div class="step-ref passed">18</div>
+<div class="step-cell passed">* def c = "test data from file"</div>
+</div>
+<div class="time-cell passed">7</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="19">
+<div class="step-ref passed">19</div>
+<div class="step-cell passed">* def d1 = "KARATE"</div>
+</div>
+<div class="time-cell passed">8</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="20">
+<div class="step-ref passed">20</div>
+<div class="step-cell passed">* def d2 = "karate"</div>
+</div>
+<div class="time-cell passed">8</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="21">
+<div class="step-ref passed">21</div>
+<div class="step-cell passed">* def d3 = "Karate"</div>
+</div>
+<div class="time-cell passed">17</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="22">
+<div class="step-ref passed">22</div>
+<div class="step-cell passed">* def d4 = "Karate bdd"</div>
+</div>
+<div class="time-cell passed">17</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="23">
+<div class="step-ref passed">23</div>
+<div class="step-cell passed">* def d5 = "cucumber bdd"</div>
+</div>
+<div class="time-cell passed">8</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="24">
+<div class="step-ref passed">24</div>
+<div class="step-cell passed">* match a == "#regex \\d+"</div>
+</div>
+<div class="time-cell passed">13</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="25">
+<div class="step-ref passed">25</div>
+<div class="step-cell passed">* match b == "#regex \\d+\\.\\d+"</div>
+</div>
+<div class="time-cell passed">8</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="26">
+<div class="step-ref passed">26</div>
+<div class="step-cell passed">* match d1 == "#regex [A-Z]+"</div>
+</div>
+<div class="time-cell passed">7</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="27">
+<div class="step-ref passed">27</div>
+<div class="step-cell passed">* match d2 == "#regex [a-z]+"</div>
+</div>
+<div class="time-cell passed">7</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="28">
+<div class="step-ref passed">28</div>
+<div class="step-cell passed">* match d3 == "#regex [A-Z][a-z]+"</div>
+</div>
+<div class="time-cell passed">7</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="29">
+<div class="step-ref passed">29</div>
+<div class="step-cell passed">* match d4 == "#regex (Karate|cucumber) bdd"</div>
+</div>
+<div class="time-cell passed">11</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="30">
+<div class="step-ref passed">30</div>
+<div class="step-cell passed">* match c == "#regex (\\w+\\s?)+"</div>
+</div>
+<div class="time-cell passed">7</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="31">
+<div class="step-ref passed">31</div>
+<div class="step-cell passed">* match c == "#regex (^test\.*)"</div>
+</div>
+<div class="time-cell passed">7</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="32">
+<div class="step-ref passed">32</div>
+<div class="step-cell passed">* match c == "#regex (\.*file$)"</div>
+</div>
+<div class="time-cell passed">6</div>
+</div>
+</div>
+</div>
+    
+</div>   
+  
+</body>
+
+</html>

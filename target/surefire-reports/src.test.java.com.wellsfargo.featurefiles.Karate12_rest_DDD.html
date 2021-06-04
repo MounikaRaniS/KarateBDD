@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+<meta charset="utf-8">
+    
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    
+<link href="res/bootstrap.min.css" rel="stylesheet" type="text/css">
+    
+<link href="res/karate-report.css" rel="stylesheet" type="text/css">
+    
+<link href="favicon.ico" rel="shortcut icon">
+    
+<script src="res/jquery.min.js" type="text/javascript"></script>
+    <script src="res/jquery.tablesorter.min.js" type="text/javascript"></script>
+    <script src="res/bootstrap.min.js" type="text/javascript"></script>
+    <script src="res/karate-report.js" type="text/javascript"></script>
+    
+<title>src.test.java.com.wellsfargo.featurefiles.Karate12_rest_DDD</title>
+  
+</head>
+  
+<body>
+    
+<div id="root-container">
+      
+<div id="leftnav">
+        
+<div class="nav-logo">
+          
+<a href="karate-summary.html">
+            <img alt="Karate" src="res/karate-logo.svg">
+          </a>
+          
+<div class="nav-count">
+            
+<div class="bg-success" id="nav-pass">3</div>
+            
+<div class="bg-danger" id="nav-fail">0</div>
+          
+</div>
+        
+</div>
+        
+<div id="nav-type">Scenarios</div>         
+        
+<div id="nav-date">2021-06-01 06:42:11 PM</div>        
+      
+<div class="nav-container">
+<div class="nav-item passed">
+<a href="#[2.1:21]">[2.1:21] Rest TestCase 2 This is for rest test case2 FOR Data driven validation using external fie</a>
+</div>
+<div class="nav-item passed">
+<a href="#[2.2:21]">[2.2:21] Rest TestCase 2 This is for rest test case2 FOR Data driven validation using external fie</a>
+</div>
+<div class="nav-item passed">
+<a href="#[2.3:21]">[2.3:21] Rest TestCase 2 This is for rest test case2 FOR Data driven validation using external fie</a>
+</div>
+</div>
+</div>
+      
+<div id="content">
+      
+<div class="page-heading alert alert-primary">
+<a href="karate-summary.html">Summary</a><span class="feature-label">|</span><a href="karate-tags.html">Tags</a><span class="feature-label">|</span><span class="feature-label">Feature:</span><span class="feature-name">src/test/java/com/wellsfargo/featurefiles/Karate12_rest_DDD.feature</span><span class="feature-description">Karate Test Suite 12 | This test suite for rest api with Data driven testing.</span>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[2.1:21]">
+<div class="heading-container">
+<div class="scenario-tags">
+<a class="badge badge-primary" href="karate-tags.html">rest</a>
+</div>
+<span class="scenario-keyword">Scenario Outline: [2.1:21]</span><span class="scenario-name">Rest TestCase 2 This is for rest test case2 FOR Data driven validation using external fie</span>
+</div>
+<div class="scenario-time passed">ms: 2817</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="1">
+<div class="step-ref passed">1</div>
+<div class="step-cell passed">Given url "https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit"</div>
+</div>
+<div class="time-cell passed">30</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="2">
+<div class="step-ref passed">2</div>
+<div class="step-cell passed">And header Content-Type = "application/x-www-form-urlencoded"</div>
+</div>
+<div class="time-cell passed">14</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="3">
+<div class="step-ref passed">3</div>
+<div class="step-cell passed">And request "Celsius=40"</div>
+</div>
+<div class="time-cell passed">15</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="4">
+<div class="step-ref passed">4</div>
+<div class="step-cell passed">When method post</div>
+</div>
+<div class="time-cell passed">2740</div>
+</div>
+<div class="preformatted" data-parent="4">18:42:08.992 request:
+1 &gt; POST https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 10
+1 &gt; Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+1 &gt; Host: www.w3schools.com
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_251)
+Celsius=40
+
+18:42:10.679 response time in milliseconds: 1674.88
+1 &lt; 200
+1 &lt; Cache-Control: private, max-age=0,public
+1 &lt; Content-Security-Policy: frame-ancestors 'self' https://mycourses.w3schools.com;
+1 &lt; Content-Type: text/xml; charset=utf-8
+1 &lt; Date: Tue, 01 Jun 2021 12:59:32 GMT
+1 &lt; Server: Microsoft-IIS/7.5
+1 &lt; Vary: Accept-Encoding
+1 &lt; X-AspNet-Version: 4.0.30319
+1 &lt; X-Content-Security-Policy: frame-ancestors 'self' https://mycourses.w3schools.com;
+1 &lt; X-Powered-By: ASP.NET
+&lt;?xml version="1.0" encoding="utf-8"?&gt;&#13;
+&lt;string xmlns="https://www.w3schools.com/xml/"&gt;104&lt;/string&gt;</div>
+<div class="step-row">
+<div class="step-container" id="5">
+<div class="step-ref passed">5</div>
+<div class="step-cell passed">Then status 200</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="6">
+<div class="step-ref passed">6</div>
+<div class="step-cell passed">* match response //string == "104"</div>
+</div>
+<div class="time-cell passed">19</div>
+</div>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[2.2:21]">
+<div class="heading-container">
+<div class="scenario-tags">
+<a class="badge badge-primary" href="karate-tags.html">rest</a>
+</div>
+<span class="scenario-keyword">Scenario Outline: [2.2:21]</span><span class="scenario-name">Rest TestCase 2 This is for rest test case2 FOR Data driven validation using external fie</span>
+</div>
+<div class="scenario-time passed">ms: 407</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="7">
+<div class="step-ref passed">7</div>
+<div class="step-cell passed">Given url "https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit"</div>
+</div>
+<div class="time-cell passed">15</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="8">
+<div class="step-ref passed">8</div>
+<div class="step-cell passed">And header Content-Type = "application/x-www-form-urlencoded"</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="9">
+<div class="step-ref passed">9</div>
+<div class="step-cell passed">And request "Celsius=37"</div>
+</div>
+<div class="time-cell passed">6</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="10">
+<div class="step-ref passed">10</div>
+<div class="step-cell passed">When method post</div>
+</div>
+<div class="time-cell passed">376</div>
+</div>
+<div class="preformatted" data-parent="10">18:42:10.748 request:
+1 &gt; POST https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 10
+1 &gt; Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+1 &gt; Host: www.w3schools.com
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_251)
+Celsius=37
+
+18:42:11.108 response time in milliseconds: 357.60
+1 &lt; 200
+1 &lt; Cache-Control: private, max-age=0,public
+1 &lt; Content-Security-Policy: frame-ancestors 'self' https://mycourses.w3schools.com;
+1 &lt; Content-Type: text/xml; charset=utf-8
+1 &lt; Date: Tue, 01 Jun 2021 12:59:32 GMT
+1 &lt; Server: Microsoft-IIS/7.5
+1 &lt; Vary: Accept-Encoding
+1 &lt; X-AspNet-Version: 4.0.30319
+1 &lt; X-Content-Security-Policy: frame-ancestors 'self' https://mycourses.w3schools.com;
+1 &lt; X-Powered-By: ASP.NET
+&lt;?xml version="1.0" encoding="utf-8"?&gt;&#13;
+&lt;string xmlns="https://www.w3schools.com/xml/"&gt;98.6&lt;/string&gt;</div>
+<div class="step-row">
+<div class="step-container" id="11">
+<div class="step-ref passed">11</div>
+<div class="step-cell passed">Then status 200</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="12">
+<div class="step-ref passed">12</div>
+<div class="step-cell passed">* match response //string == "98.6"</div>
+</div>
+<div class="time-cell passed">8</div>
+</div>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[2.3:21]">
+<div class="heading-container">
+<div class="scenario-tags">
+<a class="badge badge-primary" href="karate-tags.html">rest</a>
+</div>
+<span class="scenario-keyword">Scenario Outline: [2.3:21]</span><span class="scenario-name">Rest TestCase 2 This is for rest test case2 FOR Data driven validation using external fie</span>
+</div>
+<div class="scenario-time passed">ms: 393</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="13">
+<div class="step-ref passed">13</div>
+<div class="step-cell passed">Given url "https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit"</div>
+</div>
+<div class="time-cell passed">13</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="14">
+<div class="step-ref passed">14</div>
+<div class="step-cell passed">And header Content-Type = "application/x-www-form-urlencoded"</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="15">
+<div class="step-ref passed">15</div>
+<div class="step-cell passed">And request "Celsius=abc"</div>
+</div>
+<div class="time-cell passed">7</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="16">
+<div class="step-ref passed">16</div>
+<div class="step-cell passed">When method post</div>
+</div>
+<div class="time-cell passed">362</div>
+</div>
+<div class="preformatted" data-parent="16">18:42:11.150 request:
+1 &gt; POST https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 11
+1 &gt; Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+1 &gt; Host: www.w3schools.com
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_251)
+Celsius=abc
+
+18:42:11.504 response time in milliseconds: 350.27
+1 &lt; 200
+1 &lt; Cache-Control: private, max-age=0,public
+1 &lt; Content-Security-Policy: frame-ancestors 'self' https://mycourses.w3schools.com;
+1 &lt; Content-Type: text/xml; charset=utf-8
+1 &lt; Date: Tue, 01 Jun 2021 12:59:33 GMT
+1 &lt; Server: Microsoft-IIS/7.5
+1 &lt; Vary: Accept-Encoding
+1 &lt; X-AspNet-Version: 4.0.30319
+1 &lt; X-Content-Security-Policy: frame-ancestors 'self' https://mycourses.w3schools.com;
+1 &lt; X-Powered-By: ASP.NET
+&lt;?xml version="1.0" encoding="utf-8"?&gt;&#13;
+&lt;string xmlns="https://www.w3schools.com/xml/"&gt;Error&lt;/string&gt;</div>
+<div class="step-row">
+<div class="step-container" id="17">
+<div class="step-ref passed">17</div>
+<div class="step-cell passed">Then status 200</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="18">
+<div class="step-ref passed">18</div>
+<div class="step-cell passed">* match response //string == "Error"</div>
+</div>
+<div class="time-cell passed">10</div>
+</div>
+</div>
+</div>
+    
+</div>   
+  
+</body>
+
+</html>

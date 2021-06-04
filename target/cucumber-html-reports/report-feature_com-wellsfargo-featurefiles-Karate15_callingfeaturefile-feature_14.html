@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber Reports  - Feature: com/wellsfargo/featurefiles/Karate15_callingfeaturefile.feature</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation" ><a href="overview-steps.html">Steps</a></li>
+                <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+    
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+            <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>karateTraining</td>
+            <td>04 Jun 2021, 17:26</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+      </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Feature Report</h2>
+      </div>
+</div>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table class="stats-table">
+
+        
+<thead>
+  <tr class="header dont-sort">
+        <th></th>
+    <th colspan="6">Steps</th>
+    <th colspan="3">Scenarios</th>
+    <th colspan="2">Features</th>
+  </tr>
+  <tr>
+    <th>Feature</th>
+        <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="skipped">Skipped</th>
+    <th class="pending">Pending</th>
+    <th class="undefined">Undefined</th>
+    <th class="total">Total</th>
+
+    <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="total">Total</th>
+
+    <th>Duration</th>
+    <th>Status</th>
+  </tr>
+</thead>
+
+
+        <tbody>
+        <tr>
+          <td class="tagname">com/wellsfargo/featurefiles/Karate15_callingfeaturefile.feature</td>
+                    <td      class="passed"    >18</td>
+          <td >0</td>
+          <td >0</td>
+          <td >0</td>
+          <td >0</td>
+          <td class="total">18</td>
+
+          <td  class="passed"    >1</td>
+          <td >0</td>
+          <td class="total">1</td>
+
+          <td class="duration" data-value="1099757359">1s 099ms</td>
+          <td class="passed">Passed</td>
+        </tr>
+        </tbody>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <div class="feature">
+        
+<div class="tags indention">
+  </div>
+
+        
+<div class="brief passed">
+  <span class="keyword indention">Feature</span>
+  <span class="name">com/wellsfargo/featurefiles/Karate15_callingfeaturefile.feature</span>
+  
+
+  </div>
+
+        <div class="description indention">Karate Test Suite 15
+Calling feature file</div>
+
+        <div class="elements inner-level">
+                      
+<div class="element">
+  
+  
+<div class="tags indention">
+      <b>Tags:</b>
+           <a href="report-tag_rest.html">@rest</a>
+      </div>
+
+  
+  <span class="lead-duration duration">1s 099ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
+    
+<div class="brief passed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Calling test case 1</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention">Calling scenario module</div>
+
+  <div id="element-1" class="collapse collapsable-details ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-2">
+    
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-2" class="inner-level collapse collapsable-details ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def result = call read(&quot;Karate14_calledfeaturefile.feature@called1&quot;)</span>
+  
+  <span class="lead-duration duration">502ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention"></span>
+  <span class="name">com/wellsfargo/featurefiles/Karate14_calledfeaturefile.feature</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; Given</span>
+  <span class="name">url &quot;https://jsonplaceholder.typicode.com/posts&quot;</span>
+  
+  <span class="lead-duration duration">003ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-3">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-3" class="collapse collapsable-details">
+        <pre>17:25:34.382 From karate-config file</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; And</span>
+  <span class="name">header Content-type = &quot;application/json; charset=UTF-8&quot;</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; And</span>
+  <span class="name">request</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-4">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-4" class="collapse collapsable-details">
+        <pre>{
+title: 'karate',
+body: 'bdd',
+userId: 1888,
+}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; When</span>
+  <span class="name">method post</span>
+  
+  <span class="lead-duration duration">471ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-5">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-5" class="collapse collapsable-details">
+        <pre>17:25:34.414 request:
+1 &gt; POST https://jsonplaceholder.typicode.com/posts
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 45
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Host: jsonplaceholder.typicode.com
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_251)
+{&quot;title&quot;:&quot;karate&quot;,&quot;body&quot;:&quot;bdd&quot;,&quot;userId&quot;:1888}
+
+17:25:34.883 response time in milliseconds: 466.92
+1 &lt; 201
+1 &lt; Access-Control-Allow-Credentials: true
+1 &lt; Access-Control-Expose-Headers: Location
+1 &lt; CF-Cache-Status: DYNAMIC
+1 &lt; CF-RAY: 65a0f9e49e613bfb-BLR
+1 &lt; Cache-Control: no-cache
+1 &lt; Connection: keep-alive
+1 &lt; Content-Length: 71
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Date: Fri, 04 Jun 2021 11:56:08 GMT
+1 &lt; Etag: W/&quot;47-INiimx7cgYk3nBvqfPF30ZXwz80&quot;
+1 &lt; Expect-CT: max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;
+1 &lt; Expires: -1
+1 &lt; Location: http://jsonplaceholder.typicode.com/posts/101
+1 &lt; NEL: {&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
+1 &lt; Pragma: no-cache
+1 &lt; Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report\/v2?s=dcaEJMTkZOG4U1M0sF%2Fv39lFO2%2Fu9MFE37i97atxfXZYC8kh1IXD8l1PlceuuryD67xDzpYpANanDqBktbOAp3xQVhzcn1wEA%2BNAQYPjpeTTNwHwWgRS%2F7W5l9eesUlr1xnqdjtnF3uCrg%3D%3D&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
+1 &lt; Server: cloudflare
+1 &lt; Vary: Origin, X-HTTP-Method-Override, Accept-Encoding
+1 &lt; Via: 1.1 vegur
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; X-Powered-By: Express
+1 &lt; X-Ratelimit-Limit: 1000
+1 &lt; X-Ratelimit-Remaining: 986
+1 &lt; X-Ratelimit-Reset: 1622807788
+1 &lt; alt-svc: h3-27=&quot;:443&quot;; ma=86400, h3-28=&quot;:443&quot;; ma=86400, h3-29=&quot;:443&quot;; ma=86400, h3=&quot;:443&quot;; ma=86400
+1 &lt; cf-request-id: 0a787a82e200003bfbc388d000000001
+{
+  &quot;title&quot;: &quot;karate&quot;,
+  &quot;body&quot;: &quot;bdd&quot;,
+  &quot;userId&quot;: 1888,
+  &quot;id&quot;: 101
+}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; Then</span>
+  <span class="name">status 201</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print result</span>
+  
+  <span class="lead-duration duration">002ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-6">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-6" class="collapse collapsable-details">
+        <pre>17:25:34.888 [print] {
+  &quot;__arg&quot;: null,
+  &quot;baseUrl&quot;: &quot;https://reqres.in&quot;,
+  &quot;responseType&quot;: &quot;json&quot;,
+  &quot;responseHeaders&quot;: {
+    &quot;Date&quot;: [
+      &quot;Fri, 04 Jun 2021 11:56:08 GMT&quot;
+    ],
+    &quot;Content-Type&quot;: [
+      &quot;application/json; charset=utf-8&quot;
+    ],
+    &quot;Content-Length&quot;: [
+      &quot;71&quot;
+    ],
+    &quot;Connection&quot;: [
+      &quot;keep-alive&quot;
+    ],
+    &quot;X-Powered-By&quot;: [
+      &quot;Express&quot;
+    ],
+    &quot;X-Ratelimit-Limit&quot;: [
+      &quot;1000&quot;
+    ],
+    &quot;X-Ratelimit-Remaining&quot;: [
+      &quot;986&quot;
+    ],
+    &quot;X-Ratelimit-Reset&quot;: [
+      &quot;1622807788&quot;
+    ],
+    &quot;Vary&quot;: [
+      &quot;Origin, X-HTTP-Method-Override, Accept-Encoding&quot;
+    ],
+    &quot;Access-Control-Allow-Credentials&quot;: [
+      &quot;true&quot;
+    ],
+    &quot;Cache-Control&quot;: [
+      &quot;no-cache&quot;
+    ],
+    &quot;Pragma&quot;: [
+      &quot;no-cache&quot;
+    ],
+    &quot;Expires&quot;: [
+      &quot;-1&quot;
+    ],
+    &quot;Access-Control-Expose-Headers&quot;: [
+      &quot;Location&quot;
+    ],
+    &quot;Location&quot;: [
+      &quot;http://jsonplaceholder.typicode.com/posts/101&quot;
+    ],
+    &quot;X-Content-Type-Options&quot;: [
+      &quot;nosniff&quot;
+    ],
+    &quot;Etag&quot;: [
+      &quot;W/\&quot;47-INiimx7cgYk3nBvqfPF30ZXwz80\&quot;&quot;
+    ],
+    &quot;Via&quot;: [
+      &quot;1.1 vegur&quot;
+    ],
+    &quot;CF-Cache-Status&quot;: [
+      &quot;DYNAMIC&quot;
+    ],
+    &quot;cf-request-id&quot;: [
+      &quot;0a787a82e200003bfbc388d000000001&quot;
+    ],
+    &quot;Expect-CT&quot;: [
+      &quot;max-age=604800, report-uri=\&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\&quot;&quot;
+    ],
+    &quot;Report-To&quot;: [
+      &quot;{\&quot;endpoints\&quot;:[{\&quot;url\&quot;:\&quot;https:\\/\\/a.nel.cloudflare.com\\/report\\/v2?s=dcaEJMTkZOG4U1M0sF%2Fv39lFO2%2Fu9MFE37i97atxfXZYC8kh1IXD8l1PlceuuryD67xDzpYpANanDqBktbOAp3xQVhzcn1wEA%2BNAQYPjpeTTNwHwWgRS%2F7W5l9eesUlr1xnqdjtnF3uCrg%3D%3D\&quot;}],\&quot;group\&quot;:\&quot;cf-nel\&quot;,\&quot;max_age\&quot;:604800}&quot;
+    ],
+    &quot;NEL&quot;: [
+      &quot;{\&quot;report_to\&quot;:\&quot;cf-nel\&quot;,\&quot;max_age\&quot;:604800}&quot;
+    ],
+    &quot;Server&quot;: [
+      &quot;cloudflare&quot;
+    ],
+    &quot;CF-RAY&quot;: [
+      &quot;65a0f9e49e613bfb-BLR&quot;
+    ],
+    &quot;alt-svc&quot;: [
+      &quot;h3-27=\&quot;:443\&quot;; ma=86400, h3-28=\&quot;:443\&quot;; ma=86400, h3-29=\&quot;:443\&quot;; ma=86400, h3=\&quot;:443\&quot;; ma=86400&quot;
+    ]
+  },
+  &quot;listUsers&quot;: &quot;/api/users?page=2&quot;,
+  &quot;responseTime&quot;: 467,
+  &quot;response&quot;: {
+    &quot;id&quot;: 101,
+    &quot;title&quot;: &quot;karate&quot;,
+    &quot;body&quot;: &quot;bdd&quot;,
+    &quot;userId&quot;: 1888
+  },
+  &quot;requestTimeStamp&quot;: 1622807734415,
+  &quot;responseStatus&quot;: 201,
+  &quot;__loop&quot;: -1,
+  &quot;responseCookies&quot;: null
+}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print result.response</span>
+  
+  <span class="lead-duration duration">012ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-7">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-7" class="collapse collapsable-details">
+        <pre>17:25:34.901 [print] {
+  &quot;id&quot;: 101,
+  &quot;title&quot;: &quot;karate&quot;,
+  &quot;body&quot;: &quot;bdd&quot;,
+  &quot;userId&quot;: 1888
+}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">match result.response.title == &quot;karate&quot;</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def result1 = call read(&quot;Karate14_calledfeaturefile.feature@called2&quot;)</span>
+  
+  <span class="lead-duration duration">055ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention"></span>
+  <span class="name">com/wellsfargo/featurefiles/Karate14_calledfeaturefile.feature</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; Given</span>
+  <span class="name">url &quot;https://jsonplaceholder.typicode.com/posts/1&quot;</span>
+  
+  <span class="lead-duration duration">004ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; When</span>
+  <span class="name">method get</span>
+  
+  <span class="lead-duration duration">028ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-8">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-8" class="collapse collapsable-details">
+        <pre>17:25:34.931 request:
+1 &gt; GET https://jsonplaceholder.typicode.com/posts/1
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: jsonplaceholder.typicode.com
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_251)
+
+17:25:34.957 response time in milliseconds: 23.50
+1 &lt; 200
+1 &lt; Access-Control-Allow-Credentials: true
+1 &lt; Age: 11594
+1 &lt; CF-Cache-Status: HIT
+1 &lt; CF-RAY: 65a0f9e7d8843c07-BLR
+1 &lt; Cache-Control: max-age=43200
+1 &lt; Connection: keep-alive
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Date: Fri, 04 Jun 2021 11:56:08 GMT
+1 &lt; Etag: W/&quot;124-yiKdLzqO5gfBrJFrcdJ8Yq0LGnU&quot;
+1 &lt; Expect-CT: max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;
+1 &lt; Expires: -1
+1 &lt; NEL: {&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
+1 &lt; Pragma: no-cache
+1 &lt; Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report\/v2?s=Cf8UTkKRKrebDqqGS16vEZn9Lu4tz5aJuoILDicgo2iY%2Bm9GqYDHWPMyIRPl31hyiwf9e%2BXj0gAF2NarrGLN%2F6vGsJa2gj%2BlN1UJhv5MkHxQtbHO%2F2x38A5tfSPX0ktAGEhgyBBqJbJaSg%3D%3D&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
+1 &lt; Server: cloudflare
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Vary: Origin, Accept-Encoding
+1 &lt; Via: 1.1 vegur
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; X-Powered-By: Express
+1 &lt; X-Ratelimit-Limit: 1000
+1 &lt; X-Ratelimit-Remaining: 999
+1 &lt; X-Ratelimit-Reset: 1622008821
+1 &lt; alt-svc: h3-27=&quot;:443&quot;; ma=86400, h3-28=&quot;:443&quot;; ma=86400, h3-29=&quot;:443&quot;; ma=86400, h3=&quot;:443&quot;; ma=86400
+1 &lt; cf-request-id: 0a787a84e400003c070c17f000000001
+{
+  &quot;userId&quot;: 1,
+  &quot;id&quot;: 1,
+  &quot;title&quot;: &quot;sunt aut facere repellat provident occaecati excepturi optio reprehenderit&quot;,
+  &quot;body&quot;: &quot;quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto&quot;
+}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print result1</span>
+  
+  <span class="lead-duration duration">004ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-9">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-9" class="collapse collapsable-details">
+        <pre>17:25:34.963 [print] {
+  &quot;result&quot;: {
+    &quot;__arg&quot;: null,
+    &quot;baseUrl&quot;: &quot;https://reqres.in&quot;,
+    &quot;responseType&quot;: &quot;json&quot;,
+    &quot;responseHeaders&quot;: {
+      &quot;Date&quot;: [
+        &quot;Fri, 04 Jun 2021 11:56:08 GMT&quot;
+      ],
+      &quot;Content-Type&quot;: [
+        &quot;application/json; charset=utf-8&quot;
+      ],
+      &quot;Content-Length&quot;: [
+        &quot;71&quot;
+      ],
+      &quot;Connection&quot;: [
+        &quot;keep-alive&quot;
+      ],
+      &quot;X-Powered-By&quot;: [
+        &quot;Express&quot;
+      ],
+      &quot;X-Ratelimit-Limit&quot;: [
+        &quot;1000&quot;
+      ],
+      &quot;X-Ratelimit-Remaining&quot;: [
+        &quot;986&quot;
+      ],
+      &quot;X-Ratelimit-Reset&quot;: [
+        &quot;1622807788&quot;
+      ],
+      &quot;Vary&quot;: [
+        &quot;Origin, X-HTTP-Method-Override, Accept-Encoding&quot;
+      ],
+      &quot;Access-Control-Allow-Credentials&quot;: [
+        &quot;true&quot;
+      ],
+      &quot;Cache-Control&quot;: [
+        &quot;no-cache&quot;
+      ],
+      &quot;Pragma&quot;: [
+        &quot;no-cache&quot;
+      ],
+      &quot;Expires&quot;: [
+        &quot;-1&quot;
+      ],
+      &quot;Access-Control-Expose-Headers&quot;: [
+        &quot;Location&quot;
+      ],
+      &quot;Location&quot;: [
+        &quot;http://jsonplaceholder.typicode.com/posts/101&quot;
+      ],
+      &quot;X-Content-Type-Options&quot;: [
+        &quot;nosniff&quot;
+      ],
+      &quot;Etag&quot;: [
+        &quot;W/\&quot;47-INiimx7cgYk3nBvqfPF30ZXwz80\&quot;&quot;
+      ],
+      &quot;Via&quot;: [
+        &quot;1.1 vegur&quot;
+      ],
+      &quot;CF-Cache-Status&quot;: [
+        &quot;DYNAMIC&quot;
+      ],
+      &quot;cf-request-id&quot;: [
+        &quot;0a787a82e200003bfbc388d000000001&quot;
+      ],
+      &quot;Expect-CT&quot;: [
+        &quot;max-age=604800, report-uri=\&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\&quot;&quot;
+      ],
+      &quot;Report-To&quot;: [
+        &quot;{\&quot;endpoints\&quot;:[{\&quot;url\&quot;:\&quot;https:\\/\\/a.nel.cloudflare.com\\/report\\/v2?s=dcaEJMTkZOG4U1M0sF%2Fv39lFO2%2Fu9MFE37i97atxfXZYC8kh1IXD8l1PlceuuryD67xDzpYpANanDqBktbOAp3xQVhzcn1wEA%2BNAQYPjpeTTNwHwWgRS%2F7W5l9eesUlr1xnqdjtnF3uCrg%3D%3D\&quot;}],\&quot;group\&quot;:\&quot;cf-nel\&quot;,\&quot;max_age\&quot;:604800}&quot;
+      ],
+      &quot;NEL&quot;: [
+        &quot;{\&quot;report_to\&quot;:\&quot;cf-nel\&quot;,\&quot;max_age\&quot;:604800}&quot;
+      ],
+      &quot;Server&quot;: [
+        &quot;cloudflare&quot;
+      ],
+      &quot;CF-RAY&quot;: [
+        &quot;65a0f9e49e613bfb-BLR&quot;
+      ],
+      &quot;alt-svc&quot;: [
+        &quot;h3-27=\&quot;:443\&quot;; ma=86400, h3-28=\&quot;:443\&quot;; ma=86400, h3-29=\&quot;:443\&quot;; ma=86400, h3=\&quot;:443\&quot;; ma=86400&quot;
+      ]
+    },
+    &quot;listUsers&quot;: &quot;/api/users?page=2&quot;,
+    &quot;responseTime&quot;: 467,
+    &quot;response&quot;: {
+      &quot;id&quot;: 101,
+      &quot;title&quot;: &quot;karate&quot;,
+      &quot;body&quot;: &quot;bdd&quot;,
+      &quot;userId&quot;: 1888
+    },
+    &quot;requestTimeStamp&quot;: 1622807734415,
+    &quot;responseStatus&quot;: 201,
+    &quot;__loop&quot;: -1,
+    &quot;responseCookies&quot;: null
+  },
+  &quot;__arg&quot;: null,
+  &quot;baseUrl&quot;: &quot;https://reqres.in&quot;,
+  &quot;responseType&quot;: &quot;json&quot;,
+  &quot;responseHeaders&quot;: {
+    &quot;Date&quot;: [
+      &quot;Fri, 04 Jun 2021 11:56:08 GMT&quot;
+    ],
+    &quot;Content-Type&quot;: [
+      &quot;application/json; charset=utf-8&quot;
+    ],
+    &quot;Transfer-Encoding&quot;: [
+      &quot;chunked&quot;
+    ],
+    &quot;Connection&quot;: [
+      &quot;keep-alive&quot;
+    ],
+    &quot;X-Powered-By&quot;: [
+      &quot;Express&quot;
+    ],
+    &quot;X-Ratelimit-Limit&quot;: [
+      &quot;1000&quot;
+    ],
+    &quot;X-Ratelimit-Remaining&quot;: [
+      &quot;999&quot;
+    ],
+    &quot;X-Ratelimit-Reset&quot;: [
+      &quot;1622008821&quot;
+    ],
+    &quot;Vary&quot;: [
+      &quot;Origin, Accept-Encoding&quot;
+    ],
+    &quot;Access-Control-Allow-Credentials&quot;: [
+      &quot;true&quot;
+    ],
+    &quot;Cache-Control&quot;: [
+      &quot;max-age=43200&quot;
+    ],
+    &quot;Pragma&quot;: [
+      &quot;no-cache&quot;
+    ],
+    &quot;Expires&quot;: [
+      &quot;-1&quot;
+    ],
+    &quot;X-Content-Type-Options&quot;: [
+      &quot;nosniff&quot;
+    ],
+    &quot;Etag&quot;: [
+      &quot;W/\&quot;124-yiKdLzqO5gfBrJFrcdJ8Yq0LGnU\&quot;&quot;
+    ],
+    &quot;Via&quot;: [
+      &quot;1.1 vegur&quot;
+    ],
+    &quot;CF-Cache-Status&quot;: [
+      &quot;HIT&quot;
+    ],
+    &quot;Age&quot;: [
+      &quot;11594&quot;
+    ],
+    &quot;cf-request-id&quot;: [
+      &quot;0a787a84e400003c070c17f000000001&quot;
+    ],
+    &quot;Expect-CT&quot;: [
+      &quot;max-age=604800, report-uri=\&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\&quot;&quot;
+    ],
+    &quot;Report-To&quot;: [
+      &quot;{\&quot;endpoints\&quot;:[{\&quot;url\&quot;:\&quot;https:\\/\\/a.nel.cloudflare.com\\/report\\/v2?s=Cf8UTkKRKrebDqqGS16vEZn9Lu4tz5aJuoILDicgo2iY%2Bm9GqYDHWPMyIRPl31hyiwf9e%2BXj0gAF2NarrGLN%2F6vGsJa2gj%2BlN1UJhv5MkHxQtbHO%2F2x38A5tfSPX0ktAGEhgyBBqJbJaSg%3D%3D\&quot;}],\&quot;group\&quot;:\&quot;cf-nel\&quot;,\&quot;max_age\&quot;:604800}&quot;
+    ],
+    &quot;NEL&quot;: [
+      &quot;{\&quot;report_to\&quot;:\&quot;cf-nel\&quot;,\&quot;max_age\&quot;:604800}&quot;
+    ],
+    &quot;Server&quot;: [
+      &quot;cloudflare&quot;
+    ],
+    &quot;CF-RAY&quot;: [
+      &quot;65a0f9e7d8843c07-BLR&quot;
+    ],
+    &quot;alt-svc&quot;: [
+      &quot;h3-27=\&quot;:443\&quot;; ma=86400, h3-28=\&quot;:443\&quot;; ma=86400, h3-29=\&quot;:443\&quot;; ma=86400, h3=\&quot;:443\&quot;; ma=86400&quot;
+    ]
+  },
+  &quot;listUsers&quot;: &quot;/api/users?page=2&quot;,
+  &quot;responseTime&quot;: 23,
+  &quot;response&quot;: {
+    &quot;id&quot;: 1,
+    &quot;title&quot;: &quot;sunt aut facere repellat provident occaecati excepturi optio reprehenderit&quot;,
+    &quot;body&quot;: &quot;quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto&quot;,
+    &quot;userId&quot;: 1
+  },
+  &quot;requestTimeStamp&quot;: 1622807734932,
+  &quot;responseStatus&quot;: 200,
+  &quot;__loop&quot;: -1,
+  &quot;responseCookies&quot;: null
+}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print result1.response</span>
+  
+  <span class="lead-duration duration">006ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-10">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-10" class="collapse collapsable-details">
+        <pre>17:25:34.970 [print] {
+  &quot;id&quot;: 1,
+  &quot;title&quot;: &quot;sunt aut facere repellat provident occaecati excepturi optio reprehenderit&quot;,
+  &quot;body&quot;: &quot;quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto&quot;,
+  &quot;userId&quot;: 1
+}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">match result1.response.title contains &quot;provident&quot;</span>
+  
+  <span class="lead-duration duration">005ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-11">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-11" class="collapse collapsable-details">
+        <pre>17:25:34.976 after scenario inside config</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                  </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+<br>
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

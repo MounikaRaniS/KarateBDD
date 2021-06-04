@@ -1,0 +1,281 @@
+<testsuite failures="0" name="src/test/java/com/wellsfargo/featurefiles/Karate4.kafka_3.feature" skipped="0" tests="8" time="2.936792">
+  <testcase classname="src.test.java.com.wellsfargo.featurefiles.Karate4.kafka_3" name="Creating Consumer" time="1.507583">
+    <system-out>Given url "http://10.0.0.60:8082" ......................................... passed
+Given path "/consumers/my-consumer-group" ................................. passed
+And request ............................................................... passed
+And header Content-Type = "application/vnd.kafka.json.v2+json" ............ passed
+When method post .......................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* match response.instance_id == "Mounika1_consumer" ....................... passed
+* def consumer_url = response.base_uri .................................... passed
+* print consumer_url ...................................................... passed</system-out>
+  </testcase>
+  <testcase classname="src.test.java.com.wellsfargo.featurefiles.Karate4.kafka_3" name="Subscribing to topic" time="0.104693">
+    <system-out>Given url "http://10.0.0.60:8082" ......................................... passed
+Given path "/consumers/my-consumer-group" ................................. passed
+And request ............................................................... passed
+And header Content-Type = "application/vnd.kafka.json.v2+json" ............ passed
+When method post .......................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* match response.instance_id == "Mounika1_consumer" ....................... passed
+* def consumer_url = response.base_uri .................................... passed
+* print consumer_url ...................................................... passed
+Given url "http://10.0.0.60:8082" ......................................... passed
+Given path "/consumers/my-consumer-group/instances/Mounika1_consumer/subscription" . passed
+And request ............................................................... passed
+And header Content-Type = "application/vnd.kafka.v2+json" ................. passed
+When method post .......................................................... passed
+Then status 204 ........................................................... passed</system-out>
+  </testcase>
+  <testcase classname="src.test.java.com.wellsfargo.featurefiles.Karate4.kafka_3" name="Getting Subscription" time="0.114174">
+    <system-out>Given url "http://10.0.0.60:8082" ......................................... passed
+Given path "/consumers/my-consumer-group" ................................. passed
+And request ............................................................... passed
+And header Content-Type = "application/vnd.kafka.json.v2+json" ............ passed
+When method post .......................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* match response.instance_id == "Mounika1_consumer" ....................... passed
+* def consumer_url = response.base_uri .................................... passed
+* print consumer_url ...................................................... passed
+Given url "http://10.0.0.60:8082" ......................................... passed
+Given path "/consumers/my-consumer-group/instances/Mounika1_consumer/subscription" . passed
+And request ............................................................... passed
+And header Content-Type = "application/vnd.kafka.v2+json" ................. passed
+When method post .......................................................... passed
+Then status 204 ........................................................... passed
+Given url "http://10.0.0.60:8082" ......................................... passed
+Given path "/consumers/my-consumer-group/instances/Mounika1_consumer/subscription" . passed
+And header Accept = "application/vnd.kafka.v2+json" ....................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* assert response.topics[0] == "Mounika1_topic" ........................... passed</system-out>
+  </testcase>
+  <testcase classname="src.test.java.com.wellsfargo.featurefiles.Karate4.kafka_3" name="Getting Subscription records" time="1.053549">
+    <system-out>Given url "http://10.0.0.60:8082" ......................................... passed
+Given path "/consumers/my-consumer-group" ................................. passed
+And request ............................................................... passed
+And header Content-Type = "application/vnd.kafka.json.v2+json" ............ passed
+When method post .......................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* match response.instance_id == "Mounika1_consumer" ....................... passed
+* def consumer_url = response.base_uri .................................... passed
+* print consumer_url ...................................................... passed
+Given url "http://10.0.0.60:8082" ......................................... passed
+Given path "/consumers/my-consumer-group/instances/Mounika1_consumer/subscription" . passed
+And request ............................................................... passed
+And header Content-Type = "application/vnd.kafka.v2+json" ................. passed
+When method post .......................................................... passed
+Then status 204 ........................................................... passed
+Given url "http://10.0.0.60:8082" ......................................... passed
+Given path "/consumers/my-consumer-group/instances/Mounika1_consumer/subscription" . passed
+And header Accept = "application/vnd.kafka.v2+json" ....................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* assert response.topics[0] == "Mounika1_topic" ........................... passed
+Given url "http://10.0.0.60:8082" ......................................... passed
+Given path "/consumers/my-consumer-group/instances/Mounika1_consumer/records" . passed
+And param timeout = 3000 .................................................. passed
+And param max_bytes = 300000 .............................................. passed
+And header Accept = "application/vnd.kafka.json.v2+json" .................. passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed</system-out>
+  </testcase>
+  <testcase classname="src.test.java.com.wellsfargo.featurefiles.Karate4.kafka_3" name="Getting assigned Assignments" time="0.045248">
+    <system-out>Given url "http://10.0.0.60:8082" ......................................... passed
+Given path "/consumers/my-consumer-group" ................................. passed
+And request ............................................................... passed
+And header Content-Type = "application/vnd.kafka.json.v2+json" ............ passed
+When method post .......................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* match response.instance_id == "Mounika1_consumer" ....................... passed
+* def consumer_url = response.base_uri .................................... passed
+* print consumer_url ...................................................... passed
+Given url "http://10.0.0.60:8082" ......................................... passed
+Given path "/consumers/my-consumer-group/instances/Mounika1_consumer/subscription" . passed
+And request ............................................................... passed
+And header Content-Type = "application/vnd.kafka.v2+json" ................. passed
+When method post .......................................................... passed
+Then status 204 ........................................................... passed
+Given url "http://10.0.0.60:8082" ......................................... passed
+Given path "/consumers/my-consumer-group/instances/Mounika1_consumer/subscription" . passed
+And header Accept = "application/vnd.kafka.v2+json" ....................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* assert response.topics[0] == "Mounika1_topic" ........................... passed
+Given url "http://10.0.0.60:8082" ......................................... passed
+Given path "/consumers/my-consumer-group/instances/Mounika1_consumer/records" . passed
+And param timeout = 3000 .................................................. passed
+And param max_bytes = 300000 .............................................. passed
+And header Accept = "application/vnd.kafka.json.v2+json" .................. passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+Given url "http://10.0.0.60:8082" ......................................... passed
+Given path "/consumers/my-consumer-group/instances/Mounika1_consumer/assignments" . passed
+And header Accept = "application/vnd.kafka.v2+json" ....................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* assert response.partitions[0].topic == "Mounika1_topic" ................. passed</system-out>
+  </testcase>
+  <testcase classname="src.test.java.com.wellsfargo.featurefiles.Karate4.kafka_3" name="Deleting assigned subscription" time="0.035437">
+    <system-out>Given url "http://10.0.0.60:8082" ......................................... passed
+Given path "/consumers/my-consumer-group" ................................. passed
+And request ............................................................... passed
+And header Content-Type = "application/vnd.kafka.json.v2+json" ............ passed
+When method post .......................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* match response.instance_id == "Mounika1_consumer" ....................... passed
+* def consumer_url = response.base_uri .................................... passed
+* print consumer_url ...................................................... passed
+Given url "http://10.0.0.60:8082" ......................................... passed
+Given path "/consumers/my-consumer-group/instances/Mounika1_consumer/subscription" . passed
+And request ............................................................... passed
+And header Content-Type = "application/vnd.kafka.v2+json" ................. passed
+When method post .......................................................... passed
+Then status 204 ........................................................... passed
+Given url "http://10.0.0.60:8082" ......................................... passed
+Given path "/consumers/my-consumer-group/instances/Mounika1_consumer/subscription" . passed
+And header Accept = "application/vnd.kafka.v2+json" ....................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* assert response.topics[0] == "Mounika1_topic" ........................... passed
+Given url "http://10.0.0.60:8082" ......................................... passed
+Given path "/consumers/my-consumer-group/instances/Mounika1_consumer/records" . passed
+And param timeout = 3000 .................................................. passed
+And param max_bytes = 300000 .............................................. passed
+And header Accept = "application/vnd.kafka.json.v2+json" .................. passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+Given url "http://10.0.0.60:8082" ......................................... passed
+Given path "/consumers/my-consumer-group/instances/Mounika1_consumer/assignments" . passed
+And header Accept = "application/vnd.kafka.v2+json" ....................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* assert response.partitions[0].topic == "Mounika1_topic" ................. passed
+Given url "http://10.0.0.60:8082" ......................................... passed
+Given path "/consumers/my-consumer-group/instances/Mounika1_consumer/subscription" . passed
+And header Accept = "application/vnd.kafka.v2+json" ....................... passed
+When method delete ........................................................ passed
+Then status 204 ........................................................... passed</system-out>
+  </testcase>
+  <testcase classname="src.test.java.com.wellsfargo.featurefiles.Karate4.kafka_3" name="Deleting consumer" time="0.042328">
+    <system-out>Given url "http://10.0.0.60:8082" ......................................... passed
+Given path "/consumers/my-consumer-group" ................................. passed
+And request ............................................................... passed
+And header Content-Type = "application/vnd.kafka.json.v2+json" ............ passed
+When method post .......................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* match response.instance_id == "Mounika1_consumer" ....................... passed
+* def consumer_url = response.base_uri .................................... passed
+* print consumer_url ...................................................... passed
+Given url "http://10.0.0.60:8082" ......................................... passed
+Given path "/consumers/my-consumer-group/instances/Mounika1_consumer/subscription" . passed
+And request ............................................................... passed
+And header Content-Type = "application/vnd.kafka.v2+json" ................. passed
+When method post .......................................................... passed
+Then status 204 ........................................................... passed
+Given url "http://10.0.0.60:8082" ......................................... passed
+Given path "/consumers/my-consumer-group/instances/Mounika1_consumer/subscription" . passed
+And header Accept = "application/vnd.kafka.v2+json" ....................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* assert response.topics[0] == "Mounika1_topic" ........................... passed
+Given url "http://10.0.0.60:8082" ......................................... passed
+Given path "/consumers/my-consumer-group/instances/Mounika1_consumer/records" . passed
+And param timeout = 3000 .................................................. passed
+And param max_bytes = 300000 .............................................. passed
+And header Accept = "application/vnd.kafka.json.v2+json" .................. passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+Given url "http://10.0.0.60:8082" ......................................... passed
+Given path "/consumers/my-consumer-group/instances/Mounika1_consumer/assignments" . passed
+And header Accept = "application/vnd.kafka.v2+json" ....................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* assert response.partitions[0].topic == "Mounika1_topic" ................. passed
+Given url "http://10.0.0.60:8082" ......................................... passed
+Given path "/consumers/my-consumer-group/instances/Mounika1_consumer/subscription" . passed
+And header Accept = "application/vnd.kafka.v2+json" ....................... passed
+When method delete ........................................................ passed
+Then status 204 ........................................................... passed
+Given url "http://10.0.0.60:8082" ......................................... passed
+Given path "/consumers/my-consumer-group/instances/Mounika1_consumer" ..... passed
+And header Accept = "application/vnd.kafka.v2+json" ....................... passed
+When method delete ........................................................ passed
+Then status 204 ........................................................... passed</system-out>
+  </testcase>
+  <testcase classname="src.test.java.com.wellsfargo.featurefiles.Karate4.kafka_3" name="Deleting consumer - Negative Test Case" time="0.033781">
+    <system-out>Given url "http://10.0.0.60:8082" ......................................... passed
+Given path "/consumers/my-consumer-group" ................................. passed
+And request ............................................................... passed
+And header Content-Type = "application/vnd.kafka.json.v2+json" ............ passed
+When method post .......................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* match response.instance_id == "Mounika1_consumer" ....................... passed
+* def consumer_url = response.base_uri .................................... passed
+* print consumer_url ...................................................... passed
+Given url "http://10.0.0.60:8082" ......................................... passed
+Given path "/consumers/my-consumer-group/instances/Mounika1_consumer/subscription" . passed
+And request ............................................................... passed
+And header Content-Type = "application/vnd.kafka.v2+json" ................. passed
+When method post .......................................................... passed
+Then status 204 ........................................................... passed
+Given url "http://10.0.0.60:8082" ......................................... passed
+Given path "/consumers/my-consumer-group/instances/Mounika1_consumer/subscription" . passed
+And header Accept = "application/vnd.kafka.v2+json" ....................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* assert response.topics[0] == "Mounika1_topic" ........................... passed
+Given url "http://10.0.0.60:8082" ......................................... passed
+Given path "/consumers/my-consumer-group/instances/Mounika1_consumer/records" . passed
+And param timeout = 3000 .................................................. passed
+And param max_bytes = 300000 .............................................. passed
+And header Accept = "application/vnd.kafka.json.v2+json" .................. passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+Given url "http://10.0.0.60:8082" ......................................... passed
+Given path "/consumers/my-consumer-group/instances/Mounika1_consumer/assignments" . passed
+And header Accept = "application/vnd.kafka.v2+json" ....................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* assert response.partitions[0].topic == "Mounika1_topic" ................. passed
+Given url "http://10.0.0.60:8082" ......................................... passed
+Given path "/consumers/my-consumer-group/instances/Mounika1_consumer/subscription" . passed
+And header Accept = "application/vnd.kafka.v2+json" ....................... passed
+When method delete ........................................................ passed
+Then status 204 ........................................................... passed
+Given url "http://10.0.0.60:8082" ......................................... passed
+Given path "/consumers/my-consumer-group/instances/Mounika1_consumer" ..... passed
+And header Accept = "application/vnd.kafka.v2+json" ....................... passed
+When method delete ........................................................ passed
+Then status 204 ........................................................... passed
+Given url "http://10.0.0.60:8082" ......................................... passed
+Given path "/consumers/my-consumer-group/instances/Mounika1_consumer" ..... passed
+And header Accept = "application/vnd.kafka.v2+json" ....................... passed
+When method delete ........................................................ passed
+Then status 404 ........................................................... passed
+* assert response.message == "Consumer instance not found." ............... passed</system-out>
+  </testcase>
+</testsuite>

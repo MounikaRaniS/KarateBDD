@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+<meta charset="utf-8">
+    
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    
+<link href="res/bootstrap.min.css" rel="stylesheet" type="text/css">
+    
+<link href="res/karate-report.css" rel="stylesheet" type="text/css">
+    
+<link href="favicon.ico" rel="shortcut icon">
+    
+<script src="res/jquery.min.js" type="text/javascript"></script>
+    <script src="res/jquery.tablesorter.min.js" type="text/javascript"></script>
+    <script src="res/bootstrap.min.js" type="text/javascript"></script>
+    <script src="res/karate-report.js" type="text/javascript"></script>
+    
+<title>src.test.java.com.wellsfargo.featurefiles.Karate17_javamethodcall</title>
+  
+</head>
+  
+<body>
+    
+<div id="root-container">
+      
+<div id="leftnav">
+        
+<div class="nav-logo">
+          
+<a href="karate-summary.html">
+            <img alt="Karate" src="res/karate-logo.svg">
+          </a>
+          
+<div class="nav-count">
+            
+<div class="bg-success" id="nav-pass">0</div>
+            
+<div class="bg-danger" id="nav-fail">1</div>
+          
+</div>
+        
+</div>
+        
+<div id="nav-type">Scenarios</div>         
+        
+<div id="nav-date">2021-06-03 03:36:48 PM</div>        
+      
+<div class="nav-container">
+<div class="nav-item failed">
+<a href="#[3:32]">[3:32] java method call test case 2 java call scenario module for non static method</a>
+</div>
+</div>
+</div>
+      
+<div id="content">
+      
+<div class="page-heading alert alert-primary">
+<a href="karate-summary.html">Summary</a><span class="feature-label">|</span><a href="karate-tags.html">Tags</a><span class="feature-label">|</span><span class="feature-label">Feature:</span><span class="feature-name">src/test/java/com/wellsfargo/featurefiles/Karate17_javamethodcall.feature</span><span class="feature-description">Karate Test Suite 17 | java  methodcall feature file</span>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[3:32]">
+<div class="heading-container">
+<div class="scenario-tags"></div>
+<span class="scenario-keyword">Scenario: [3:32]</span><span class="scenario-name">java method call test case 2 java call scenario module for non static method</span>
+</div>
+<div class="scenario-time failed">ms: 183</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="1">
+<div class="step-ref failed">1</div>
+<div class="step-cell failed">* def result1 =</div>
+</div>
+<div class="time-cell failed">183</div>
+</div>
+<div class="preformatted" data-parent="1">function()
+{
+var a = new() Java.type('com.wellsfargo.utils.BDDUtil')
+return a.getNonStaticMethod();
+}
+15:36:48.176 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js
+Karate17_javamethodcall.feature:34 - evaluation (js) failed: function()
+{
+var a = new() Java.type('com.wellsfargo.utils.BDDUtil')
+return a.getNonStaticMethod();
+}, javax.script.ScriptException: &lt;eval&gt;:3:12 Expected an operand but found )&#13;
+var a = new() Java.type('com.wellsfargo.utils.BDDUtil')&#13;
+            ^ in &lt;eval&gt; at line number 3 at column number 12
+stack trace: jdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:470)</div>
+<div class="step-row">
+<div class="step-container" id="2">
+<div class="step-ref skipped">2</div>
+<div class="step-cell skipped">* print result1()</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+</div>
+</div>
+    
+</div>   
+  
+</body>
+
+</html>

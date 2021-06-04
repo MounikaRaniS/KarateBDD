@@ -1,0 +1,48 @@
+<testsuite failures="0" name="src/test/java/com/wellsfargo/featurefiles/Karate05_soap_validation.feature" skipped="0" tests="2" time="2.885951">
+  <testcase classname="src.test.java.com.wellsfargo.featurefiles.Karate05_soap_validation" name="Karate Soap1.1 complete validation TestCase 1" time="2.466161">
+    <system-out>Given url "https://www.w3schools.com/xml/tempconvert.asmx" ................ passed
+And header Content-Type = "text/xml; charset=utf-8" ....................... passed
+And request ............................................................... passed
+When soap action "https://www.w3schools.com/xml/CelsiusToFahrenheit" ...... passed
+Then status 200 ........................................................... passed
+* print responseHeaders ................................................... passed
+* match responseHeaders["Server"] == ["Microsoft-IIS/7.5"] ................ passed
+* match responseHeaders["Server"][0] == "Microsoft-IIS/7.5" ............... passed
+* match responseType == "xml" ............................................. passed
+* print response .......................................................... passed
+* match response contains "98.6" .......................................... passed
+* match response //CelsiusToFahrenheitResult == 98.6 ...................... passed
+* assert responseTime &lt;= 2000 ............................................. passed
+* print responseTime ...................................................... passed</system-out>
+  </testcase>
+  <testcase classname="src.test.java.com.wellsfargo.featurefiles.Karate05_soap_validation" name="Karate Soap1.2 API TestCase 2" time="0.41979">
+    <system-out>Given url "https://www.w3schools.com/xml/tempconvert.asmx" ................ passed
+And header Content-Type = "text/xml; charset=utf-8" ....................... passed
+And request ............................................................... passed
+When soap action "https://www.w3schools.com/xml/CelsiusToFahrenheit" ...... passed
+Then status 200 ........................................................... passed
+* print responseHeaders ................................................... passed
+* match responseHeaders["Server"] == ["Microsoft-IIS/7.5"] ................ passed
+* match responseHeaders["Server"][0] == "Microsoft-IIS/7.5" ............... passed
+* match responseType == "xml" ............................................. passed
+* print response .......................................................... passed
+* match response contains "98.6" .......................................... passed
+* match response //CelsiusToFahrenheitResult == 98.6 ...................... passed
+* assert responseTime &lt;= 2000 ............................................. passed
+* print responseTime ...................................................... passed
+Given url "https://www.w3schools.com/xml/tempconvert.asmx" ................ passed
+And header Content-Type = "application/soap+xml; charset=utf-8" ........... passed
+And request ............................................................... passed
+When method post .......................................................... passed
+Then status 200 ........................................................... passed
+* print responseHeaders ................................................... passed
+* match responseHeaders["Content-Type"] == ["application/soap+xml; charset=utf-8"] . passed
+* match responseHeaders["Content-Type"][0] == "application/soap+xml; charset=utf-8" . passed
+* match responseType == "xml" ............................................. passed
+* print response .......................................................... passed
+* match response contains "104" ........................................... passed
+* match response //CelsiusToFahrenheitResult == 104 ....................... passed
+* assert responseTime &lt;= 2000 ............................................. passed
+* print responseTime ...................................................... passed</system-out>
+  </testcase>
+</testsuite>

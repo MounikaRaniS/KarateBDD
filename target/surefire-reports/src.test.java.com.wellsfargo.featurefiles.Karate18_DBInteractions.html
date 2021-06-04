@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+<meta charset="utf-8">
+    
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    
+<link href="res/bootstrap.min.css" rel="stylesheet" type="text/css">
+    
+<link href="res/karate-report.css" rel="stylesheet" type="text/css">
+    
+<link href="favicon.ico" rel="shortcut icon">
+    
+<script src="res/jquery.min.js" type="text/javascript"></script>
+    <script src="res/jquery.tablesorter.min.js" type="text/javascript"></script>
+    <script src="res/bootstrap.min.js" type="text/javascript"></script>
+    <script src="res/karate-report.js" type="text/javascript"></script>
+    
+<title>src.test.java.com.wellsfargo.featurefiles.Karate18_DBInteractions</title>
+  
+</head>
+  
+<body>
+    
+<div id="root-container">
+      
+<div id="leftnav">
+        
+<div class="nav-logo">
+          
+<a href="karate-summary.html">
+            <img alt="Karate" src="res/karate-logo.svg">
+          </a>
+          
+<div class="nav-count">
+            
+<div class="bg-success" id="nav-pass">4</div>
+            
+<div class="bg-danger" id="nav-fail">0</div>
+          
+</div>
+        
+</div>
+        
+<div id="nav-type">Scenarios</div>         
+        
+<div id="nav-date">2021-06-03 04:41:23 PM</div>        
+      
+<div class="nav-container">
+<div class="nav-item passed">
+<a href="#[1:9]">[1:9] select stmt TestCase 1 This is for db select stmt test case1&#13;
+&#13;
+  db select validation 1</a>
+</div>
+<div class="nav-item passed">
+<a href="#[2:20]">[2:20] insert stmt TestCase 2 This is for db insert stmt test case2&#13;
+&#13;
+  db select validation 1</a>
+</div>
+<div class="nav-item passed">
+<a href="#[3:34]">[3:34] update stmt TestCase 3 This is for db update stmt test case3</a>
+</div>
+<div class="nav-item passed">
+<a href="#[4:47]">[4:47] delete stmt TestCase 3 This is for db delecte stmt test case3</a>
+</div>
+</div>
+</div>
+      
+<div id="content">
+      
+<div class="page-heading alert alert-primary">
+<a href="karate-summary.html">Summary</a><span class="feature-label">|</span><a href="karate-tags.html">Tags</a><span class="feature-label">|</span><span class="feature-label">Feature:</span><span class="feature-name">src/test/java/com/wellsfargo/featurefiles/Karate18_DBInteractions.feature</span><span class="feature-description">Karate Test Suite 18 | This test suite for db interactions call</span>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[1:9]">
+<div class="heading-container">
+<div class="scenario-tags">
+<a class="badge badge-primary" href="karate-tags.html">select</a><a class="badge badge-primary" href="karate-tags.html">db</a>
+</div>
+<span class="scenario-keyword">Scenario: [1:9]</span><span class="scenario-name">select stmt TestCase 1 This is for db select stmt test case1&#13;
+&#13;
+  db select validation 1</span>
+</div>
+<div class="scenario-time passed">ms: 1815</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="[1:9]bg">
+<div class="step-ref bg-step">&gt;&gt;</div>
+<div class="step-cell passed">Background:</div>
+</div>
+<div class="time-cell passed"></div>
+</div>
+<div class="step-row" data-parent="[1:9]bg">
+<div class="step-container" id="1">
+<div class="step-ref bg-step">1</div>
+<div class="step-cell passed">* def db = Java.type('com.wellsfargo.utils.MyDBUtils')</div>
+</div>
+<div class="time-cell passed">43</div>
+</div>
+<div class="preformatted" data-parent="1">16:41:20.581 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js</div>
+<div class="step-row">
+<div class="step-container" id="2">
+<div class="step-ref passed">2</div>
+<div class="step-cell passed">* def rows = db.selectStatement("select * from tools")</div>
+</div>
+<div class="time-cell passed">1772</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="3">
+<div class="step-ref passed">3</div>
+<div class="step-cell passed">* print rows</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="preformatted" data-parent="3">16:41:22.474 [print] 9209,sample9209,xyz9209,
+188,KarateBDD,Training,</div>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[2:20]">
+<div class="heading-container">
+<div class="scenario-tags">
+<a class="badge badge-primary" href="karate-tags.html">insert</a><a class="badge badge-primary" href="karate-tags.html">db</a>
+</div>
+<span class="scenario-keyword">Scenario: [2:20]</span><span class="scenario-name">insert stmt TestCase 2 This is for db insert stmt test case2&#13;
+&#13;
+  db select validation 1</span>
+</div>
+<div class="scenario-time passed">ms: 230</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="[2:20]bg">
+<div class="step-ref bg-step">&gt;&gt;</div>
+<div class="step-cell passed">Background:</div>
+</div>
+<div class="time-cell passed"></div>
+</div>
+<div class="step-row" data-parent="[2:20]bg">
+<div class="step-container" id="4">
+<div class="step-ref bg-step">4</div>
+<div class="step-cell passed">* def db = Java.type('com.wellsfargo.utils.MyDBUtils')</div>
+</div>
+<div class="time-cell passed">5</div>
+</div>
+<div class="preformatted" data-parent="4">16:41:22.506 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js</div>
+<div class="step-row">
+<div class="step-container" id="5">
+<div class="step-ref passed">5</div>
+<div class="step-cell passed">* def result = db.insertStatement("Insert into tools values(2117,'java211','python')")</div>
+</div>
+<div class="time-cell passed">136</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="6">
+<div class="step-ref passed">6</div>
+<div class="step-cell passed">* print result</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="preformatted" data-parent="6">16:41:22.657 [print] Success</div>
+<div class="step-row">
+<div class="step-container" id="7">
+<div class="step-ref passed">7</div>
+<div class="step-cell passed">* match result == "Success"</div>
+</div>
+<div class="time-cell passed">13</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="8">
+<div class="step-ref passed">8</div>
+<div class="step-cell passed">* def rows = db.selectStatement("select * from tools where toolid=2117 ")</div>
+</div>
+<div class="time-cell passed">66</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="9">
+<div class="step-ref passed">9</div>
+<div class="step-cell passed">* print rows</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="preformatted" data-parent="9">16:41:22.738 [print] 2117,java211,python,</div>
+<div class="step-row">
+<div class="step-container" id="10">
+<div class="step-ref passed">10</div>
+<div class="step-cell passed">* match rows contains "java211"</div>
+</div>
+<div class="time-cell passed">8</div>
+</div>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[3:34]">
+<div class="heading-container">
+<div class="scenario-tags">
+<a class="badge badge-primary" href="karate-tags.html">update</a><a class="badge badge-primary" href="karate-tags.html">db</a>
+</div>
+<span class="scenario-keyword">Scenario: [3:34]</span><span class="scenario-name">update stmt TestCase 3 This is for db update stmt test case3</span>
+</div>
+<div class="scenario-time passed">ms: 172</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="[3:34]bg">
+<div class="step-ref bg-step">&gt;&gt;</div>
+<div class="step-cell passed">Background:</div>
+</div>
+<div class="time-cell passed"></div>
+</div>
+<div class="step-row" data-parent="[3:34]bg">
+<div class="step-container" id="11">
+<div class="step-ref bg-step">11</div>
+<div class="step-cell passed">* def db = Java.type('com.wellsfargo.utils.MyDBUtils')</div>
+</div>
+<div class="time-cell passed">3</div>
+</div>
+<div class="preformatted" data-parent="11">16:41:22.771 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js</div>
+<div class="step-row">
+<div class="step-container" id="12">
+<div class="step-ref passed">12</div>
+<div class="step-cell passed">* def rowseffected = db.updateStatement("update tools set toolname='Mounika' where toolid=2117")</div>
+</div>
+<div class="time-cell passed">83</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="13">
+<div class="step-ref passed">13</div>
+<div class="step-cell passed">* print rowseffected</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="preformatted" data-parent="13">16:41:22.859 [print] 1</div>
+<div class="step-row">
+<div class="step-container" id="14">
+<div class="step-ref passed">14</div>
+<div class="step-cell passed">* assert rowseffected &gt;= 1</div>
+</div>
+<div class="time-cell passed">31</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="15">
+<div class="step-ref passed">15</div>
+<div class="step-cell passed">* def rows = db.selectStatement("select * from tools where toolid=2117 ")</div>
+</div>
+<div class="time-cell passed">48</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="16">
+<div class="step-ref passed">16</div>
+<div class="step-cell passed">* print rows</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="preformatted" data-parent="16">16:41:22.939 [print] 2117,Mounika,python,</div>
+<div class="step-row">
+<div class="step-container" id="17">
+<div class="step-ref passed">17</div>
+<div class="step-cell passed">* match rows contains "Mounika"</div>
+</div>
+<div class="time-cell passed">6</div>
+</div>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[4:47]">
+<div class="heading-container">
+<div class="scenario-tags">
+<a class="badge badge-primary" href="karate-tags.html">deleted</a><a class="badge badge-primary" href="karate-tags.html">db</a>
+</div>
+<span class="scenario-keyword">Scenario: [4:47]</span><span class="scenario-name">delete stmt TestCase 3 This is for db delecte stmt test case3</span>
+</div>
+<div class="scenario-time passed">ms: 114</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="[4:47]bg">
+<div class="step-ref bg-step">&gt;&gt;</div>
+<div class="step-cell passed">Background:</div>
+</div>
+<div class="time-cell passed"></div>
+</div>
+<div class="step-row" data-parent="[4:47]bg">
+<div class="step-container" id="18">
+<div class="step-ref bg-step">18</div>
+<div class="step-cell passed">* def db = Java.type('com.wellsfargo.utils.MyDBUtils')</div>
+</div>
+<div class="time-cell passed">2</div>
+</div>
+<div class="preformatted" data-parent="18">16:41:22.963 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js</div>
+<div class="step-row">
+<div class="step-container" id="19">
+<div class="step-ref passed">19</div>
+<div class="step-cell passed">* def rowseffected = db.deleteStatement("delete from tools where toolid=2117")</div>
+</div>
+<div class="time-cell passed">58</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="20">
+<div class="step-ref passed">20</div>
+<div class="step-cell passed">* print rowseffected</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="preformatted" data-parent="20">16:41:23.027 [print] 1</div>
+<div class="step-row">
+<div class="step-container" id="21">
+<div class="step-ref passed">21</div>
+<div class="step-cell passed">* assert rowseffected &gt;= 1</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="22">
+<div class="step-ref passed">22</div>
+<div class="step-cell passed">* def rows = db.selectStatement("select * from tools where toolid=2117 ")</div>
+</div>
+<div class="time-cell passed">50</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="23">
+<div class="step-ref passed">23</div>
+<div class="step-cell passed">* print rows</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="preformatted" data-parent="23">16:41:23.080 [print]</div>
+<div class="step-row">
+<div class="step-container" id="24">
+<div class="step-ref passed">24</div>
+<div class="step-cell passed">* match rows !contains "Mounika"</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+</div>
+</div>
+    
+</div>   
+  
+</body>
+
+</html>

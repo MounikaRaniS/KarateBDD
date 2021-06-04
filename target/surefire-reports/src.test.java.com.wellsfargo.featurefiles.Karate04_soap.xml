@@ -1,0 +1,9 @@
+<testsuite failures="0" name="src/test/java/com/wellsfargo/featurefiles/Karate04_soap.feature" skipped="0" tests="1" time="2.238812">
+  <testcase classname="src.test.java.com.wellsfargo.featurefiles.Karate04_soap" name="Karate Soap1.2 API TestCase 2" time="2.238812">
+    <system-out>Given url "https://www.w3schools.com/xml/tempconvert.asmx" ................ passed
+And header Content-Type = "application/soap+xml; charset=utf-8" ........... passed
+And request ............................................................... passed
+When method post .......................................................... passed
+Then status 200 ........................................................... passed</system-out>
+  </testcase>
+</testsuite>

@@ -1,0 +1,40 @@
+<testsuite failures="0" name="src/test/java/com/wellsfargo/featurefiles/Karate22.kafka.feature" skipped="0" tests="2" time="1.755916">
+  <testcase classname="src.test.java.com.wellsfargo.featurefiles.Karate22.kafka" name="Getting List of Topics &amp; specific topic" time="1.681851">
+    <system-out>Given url "http://10.0.0.60:8082" ......................................... passed
+Given path "/topics" ...................................................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* assert responseType == "json" ........................................... passed
+* match response[1] contains "confluent" .................................. passed
+* def topic = response[1] ................................................. passed
+* print topic ............................................................. passed
+Given path "/topics/" + topic ............................................. passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* assert response.name == topic ........................................... passed</system-out>
+  </testcase>
+  <testcase classname="src.test.java.com.wellsfargo.featurefiles.Karate22.kafka" name="Negative Test Case - non-existing topic" time="0.074065">
+    <system-out>Given url "http://10.0.0.60:8082" ......................................... passed
+Given path "/topics" ...................................................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* assert responseType == "json" ........................................... passed
+* match response[1] contains "confluent" .................................. passed
+* def topic = response[1] ................................................. passed
+* print topic ............................................................. passed
+Given path "/topics/" + topic ............................................. passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* assert response.name == topic ........................................... passed
+Given url "http://10.0.0.60:8082" ......................................... passed
+Given path "/topics/rest123" .............................................. passed
+When method get ........................................................... passed
+Then status 404 ........................................................... passed
+* print response .......................................................... passed
+* match response.message == "This server does not host this topic-partition." . passed</system-out>
+  </testcase>
+</testsuite>

@@ -1,0 +1,23 @@
+<testsuite failures="1" name="src/test/java/com/wellsfargo/featurefiles/Karate08_soap_externalFilevalidation_assignment.feature" skipped="0" tests="1" time="3.818365">
+  <testcase classname="src.test.java.com.wellsfargo.featurefiles.Karate08_soap_externalFilevalidation_assignment" name="soap 1.1 payload from external file TestCase 1" time="3.818365">
+    <failure message="Karate08_soap_externalFilevalidation_assignment.feature:12 - status code was: 500, expected: 200, response time: 1460, url: https://ecs.syr.edu/faculty/fawcett/Handouts/cse775/code/calcWebService/Calc.asmx, response: &lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soap:Body&gt;&lt;soap:Fault&gt;&lt;faultcode&gt;soap:Client&lt;/faultcode&gt;&lt;faultstring&gt;Server was unable to read request. ---&amp;gt; There is an error in XML document (4, 23). ---&amp;gt; Input string was not in a correct format.&lt;/faultstring&gt;&lt;detail/&gt;&lt;/soap:Fault&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;">Given url "https://ecs.syr.edu/faculty/fawcett/Handouts/cse775/code/calcWebService/Calc.asmx" . passed
+And header Content-Type = "text/xml; charset=utf-8" ....................... passed
+And request read("calclus.xml") ........................................... passed
+When soap action "http://tempuri.org/Add" ................................. passed
+Then status 200 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: Karate08_soap_externalFilevalidation_assignment.feature:12 - status code was: 500, expected: 200, response time: 1460, url: https://ecs.syr.edu/faculty/fawcett/Handouts/cse775/code/calcWebService/Calc.asmx, response: &lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;soap:Body&gt;&lt;soap:Fault&gt;&lt;faultcode&gt;soap:Client&lt;/faultcode&gt;&lt;faultstring&gt;Server was unable to read request. ---&amp;gt; There is an error in XML document (4, 23). ---&amp;gt; Input string was not in a correct format.&lt;/faultstring&gt;&lt;detail/&gt;&lt;/soap:Fault&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;&#13;
+	at ✽.Then status 200 (Karate08_soap_externalFilevalidation_assignment.feature:12)&#13;
+
+* print responseHeaders ................................................... skipped
+* match responseHeaders["X-AspNet-Version"] == ["4.0.30319"] .............. skipped
+* match responseHeaders["X-AspNet-Version"][0] == "4.0.30319" ............. skipped
+* match responseType == "xml" ............................................. skipped
+* print response .......................................................... skipped
+* match response contains "30" ............................................ skipped
+* match response //AddResponse/AddResult == "30" .......................... skipped
+* print responseTime ...................................................... skipped
+* assert responseTime &lt;= 2000 ............................................. skipped</failure>
+  </testcase>
+</testsuite>

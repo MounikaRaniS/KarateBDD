@@ -1,0 +1,8 @@
+<testsuite failures="0" name="src/test/java/com/wellsfargo/featurefiles/Karate07_readFromFile.feature" skipped="0" tests="1" time="1.543309">
+  <testcase classname="src.test.java.com.wellsfargo.featurefiles.Karate07_readFromFile" name="Karate Soap1.1 complete validation TestCase 1" time="1.543309">
+    <system-out>* def xml = read("tempconvert_input.xml") ................................. passed
+* print xml ............................................................... passed
+* match xml contains 39 ................................................... passed
+* match xml //CelsiusToFahrenheit/Celsius == 39 ........................... passed</system-out>
+  </testcase>
+</testsuite>

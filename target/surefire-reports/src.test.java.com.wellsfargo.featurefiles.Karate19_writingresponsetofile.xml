@@ -1,0 +1,37 @@
+<testsuite failures="2" name="src/test/java/com/wellsfargo/featurefiles/Karate19_writingresponsetofile.feature" skipped="0" tests="2" time="0.061933">
+  <testcase classname="src.test.java.com.wellsfargo.featurefiles.Karate19_writingresponsetofile" name="writing response to file TestCase 1" time="0.04524">
+    <failure message="Karate19_writingresponsetofile.feature:7 - evaluation (js) failed: Java.type('com.wellsfargo.utils.Karate19');, java.lang.RuntimeException: java.lang.ClassNotFoundException: com.wellsfargo.utils.Karate19&#10;stack trace: jdk.nashorn.internal.runtime.ScriptRuntime.apply(ScriptRuntime.java:397)">* def util = Java.type('com.wellsfargo.utils.Karate19'); .................. failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: Karate19_writingresponsetofile.feature:7 - evaluation (js) failed: Java.type('com.wellsfargo.utils.Karate19');, java.lang.RuntimeException: java.lang.ClassNotFoundException: com.wellsfargo.utils.Karate19
+stack trace: jdk.nashorn.internal.runtime.ScriptRuntime.apply(ScriptRuntime.java:397)&#13;
+	at ✽.* def util = Java.type('com.wellsfargo.utils.Karate19'); (Karate19_writingresponsetofile.feature:7)&#13;
+
+Given url "https://jsonplaceholder.typicode.com/posts/1" .................. skipped
+When method get ........................................................... skipped
+Then status 200 ........................................................... skipped
+* def result = get response ............................................... skipped
+* util.writeToFile("src/test/resources/test.json", result); ............... skipped</failure>
+  </testcase>
+  <testcase classname="src.test.java.com.wellsfargo.featurefiles.Karate19_writingresponsetofile" name="reading response from file TestCase 2" time="0.016693">
+    <failure message="Karate19_writingresponsetofile.feature:17 - could not find or read file: classpath:test.json">* def util = Java.type('com.wellsfargo.utils.Karate19'); .................. failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: Karate19_writingresponsetofile.feature:7 - evaluation (js) failed: Java.type('com.wellsfargo.utils.Karate19');, java.lang.RuntimeException: java.lang.ClassNotFoundException: com.wellsfargo.utils.Karate19
+stack trace: jdk.nashorn.internal.runtime.ScriptRuntime.apply(ScriptRuntime.java:397)&#13;
+	at ✽.* def util = Java.type('com.wellsfargo.utils.Karate19'); (Karate19_writingresponsetofile.feature:7)&#13;
+
+Given url "https://jsonplaceholder.typicode.com/posts/1" .................. skipped
+When method get ........................................................... skipped
+Then status 200 ........................................................... skipped
+* def result = get response ............................................... skipped
+* util.writeToFile("src/test/resources/test.json", result); ............... skipped
+* def fileResponse = read('classpath:test.json') .......................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: Karate19_writingresponsetofile.feature:17 - could not find or read file: classpath:test.json&#13;
+	at ✽.* def fileResponse = read('classpath:test.json') (Karate19_writingresponsetofile.feature:17)&#13;
+
+* print fileResponse ...................................................... skipped</failure>
+  </testcase>
+</testsuite>

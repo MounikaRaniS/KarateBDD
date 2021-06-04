@@ -1,0 +1,24 @@
+<testsuite failures="0" name="src/test/java/com/wellsfargo/featurefiles/Karate03.feature" skipped="0" tests="2" time="0.371716">
+  <testcase classname="src.test.java.com.wellsfargo.featurefiles.Karate03" name="Karate XML TestCase 1" time="0.355455">
+    <system-out>Given def xml = &lt;info&gt;&lt;id&gt;101&lt;/id&gt;&lt;tool&gt;&lt;name&gt;Karate&lt;/name&gt;&lt;version&gt;0.9.6&lt;/version&gt;&lt;/tool&gt;&lt;/info&gt; . passed
+* print xml ............................................................... passed
+* print xml/info/id ....................................................... passed
+* print xml.info.id ....................................................... passed
+* assert xml.info.id == 101 ............................................... passed
+* match xml/info/tool contains "&lt;name&gt;Karate&lt;/name&gt;&lt;version&gt;0.9.6&lt;/version&gt;" . passed
+* match xml contains 'Karate' ............................................. passed</system-out>
+  </testcase>
+  <testcase classname="src.test.java.com.wellsfargo.featurefiles.Karate03" name="Karate XML TestCase 2" time="0.016261">
+    <system-out>Given def xml = &lt;info&gt;&lt;id&gt;101&lt;/id&gt;&lt;tool&gt;&lt;name&gt;Karate&lt;/name&gt;&lt;version&gt;0.9.6&lt;/version&gt;&lt;/tool&gt;&lt;/info&gt; . passed
+* print xml ............................................................... passed
+* print xml/info/id ....................................................... passed
+* print xml.info.id ....................................................... passed
+* assert xml.info.id == 101 ............................................... passed
+* match xml/info/tool contains "&lt;name&gt;Karate&lt;/name&gt;&lt;version&gt;0.9.6&lt;/version&gt;" . passed
+* match xml contains 'Karate' ............................................. passed
+Given def xml = ........................................................... passed
+* print xml ............................................................... passed
+* match xml/info/tool[1] contains "&lt;name&gt;Karate&lt;/name&gt;&lt;version&gt;0.9.6&lt;/version&gt;" . passed
+* match xml contains 'Karate' ............................................. passed</system-out>
+  </testcase>
+</testsuite>

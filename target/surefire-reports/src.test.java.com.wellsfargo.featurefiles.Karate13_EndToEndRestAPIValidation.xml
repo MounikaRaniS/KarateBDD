@@ -1,0 +1,22 @@
+<testsuite failures="0" name="src/test/java/com/wellsfargo/featurefiles/Karate13_EndToEndRestAPIValidation.feature" skipped="0" tests="1" time="3.890825">
+  <testcase classname="src.test.java.com.wellsfargo.featurefiles.Karate13_EndToEndRestAPIValidation" name="end to end rest API TestCase 1" time="3.890825">
+    <system-out>Given url "https://jsonplaceholder.typicode.com/posts" .................... passed
+And header Content-type = "application/json; charset=UTF-8" ............... passed
+And request ............................................................... passed
+When method post .......................................................... passed
+Then status 201 ........................................................... passed
+* def id = 10 ............................................................. passed
+* print id ................................................................ passed
+Given url "https://jsonplaceholder.typicode.com/posts/" + id .............. passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+Given url "https://jsonplaceholder.typicode.com/posts/" + id .............. passed
+And header Content-type = "application/json; charset=UTF-8" ............... passed
+And request "{ id: " + id + ", title: 'foo1', body: 'bar1', userId: 1 }" .. passed
+When method put ........................................................... passed
+Then status 200 ........................................................... passed
+Given url "https://jsonplaceholder.typicode.com/posts/" + id .............. passed
+When method delete ........................................................ passed
+Then status 200 ........................................................... passed</system-out>
+  </testcase>
+</testsuite>

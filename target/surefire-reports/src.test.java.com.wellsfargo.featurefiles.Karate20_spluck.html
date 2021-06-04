@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+<meta charset="utf-8">
+    
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    
+<link href="res/bootstrap.min.css" rel="stylesheet" type="text/css">
+    
+<link href="res/karate-report.css" rel="stylesheet" type="text/css">
+    
+<link href="favicon.ico" rel="shortcut icon">
+    
+<script src="res/jquery.min.js" type="text/javascript"></script>
+    <script src="res/jquery.tablesorter.min.js" type="text/javascript"></script>
+    <script src="res/bootstrap.min.js" type="text/javascript"></script>
+    <script src="res/karate-report.js" type="text/javascript"></script>
+    
+<title>src.test.java.com.wellsfargo.featurefiles.Karate20_spluck</title>
+  
+</head>
+  
+<body>
+    
+<div id="root-container">
+      
+<div id="leftnav">
+        
+<div class="nav-logo">
+          
+<a href="karate-summary.html">
+            <img alt="Karate" src="res/karate-logo.svg">
+          </a>
+          
+<div class="nav-count">
+            
+<div class="bg-success" id="nav-pass">1</div>
+            
+<div class="bg-danger" id="nav-fail">0</div>
+          
+</div>
+        
+</div>
+        
+<div id="nav-type">Scenarios</div>         
+        
+<div id="nav-date">2021-06-03 06:36:35 PM</div>        
+      
+<div class="nav-container">
+<div class="nav-item passed">
+<a href="#[3:40]">[3:40] splunk TestCase 3 This is for splunk test case3</a>
+</div>
+</div>
+</div>
+      
+<div id="content">
+      
+<div class="page-heading alert alert-primary">
+<a href="karate-summary.html">Summary</a><span class="feature-label">|</span><a href="karate-tags.html">Tags</a><span class="feature-label">|</span><span class="feature-label">Feature:</span><span class="feature-name">src/test/java/com/wellsfargo/featurefiles/Karate20_spluck.feature</span><span class="feature-description">Karate Test Suite 20 | This test suite for splunk</span>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[3:40]">
+<div class="heading-container">
+<div class="scenario-tags"></div>
+<span class="scenario-keyword">Scenario: [3:40]</span><span class="scenario-name">splunk TestCase 3 This is for splunk test case3</span>
+</div>
+<div class="scenario-time passed">ms: 1962</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="[3:40]bg">
+<div class="step-ref bg-step">&gt;&gt;</div>
+<div class="step-cell passed">Background:</div>
+</div>
+<div class="time-cell passed"></div>
+</div>
+<div class="step-row" data-parent="[3:40]bg">
+<div class="step-container" id="1">
+<div class="step-ref bg-step">1</div>
+<div class="step-cell passed">* def login =</div>
+</div>
+<div class="time-cell passed">28</div>
+</div>
+<div class="preformatted" data-parent="1">function(uid, pwd) {
+    var temp = uid + ':' + pwd;
+    var Base64 = Java.type('java.util.Base64');
+    var encoded = Base64.getEncoder().encodeToString(temp.bytes);
+    return 'Basic ' + encoded;
+}
+18:36:32.657 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js</div>
+<div class="step-row" data-parent="[3:40]bg">
+<div class="step-container" id="2">
+<div class="step-ref bg-step">2</div>
+<div class="step-cell passed">* def auth = login("palmetoadmin", "P@lmeto@123")</div>
+</div>
+<div class="time-cell passed">224</div>
+</div>
+<div class="step-row" data-parent="[3:40]bg">
+<div class="step-container" id="3">
+<div class="step-ref bg-step">3</div>
+<div class="step-cell passed">* print auth</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="preformatted" data-parent="3">18:36:32.963 [print] Basic cGFsbWV0b2FkbWluOlBAbG1ldG9AMTIz</div>
+<div class="step-row" data-parent="[3:40]bg">
+<div class="step-container" id="4">
+<div class="step-ref bg-step">4</div>
+<div class="step-cell passed">* configure ssl = true</div>
+</div>
+<div class="time-cell passed">640</div>
+</div>
+<div class="step-row" data-parent="[3:40]bg">
+<div class="step-container" id="5">
+<div class="step-ref bg-step">5</div>
+<div class="step-cell passed">Given url "https://10.0.0.60:8089"</div>
+</div>
+<div class="time-cell passed">7</div>
+</div>
+<div class="step-row" data-parent="[3:40]bg">
+<div class="step-container" id="6">
+<div class="step-ref bg-step">6</div>
+<div class="step-cell passed">And header Authorization = auth</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="7">
+<div class="step-ref passed">7</div>
+<div class="step-cell passed">Given path "/services/alerts/fired_alerts"</div>
+</div>
+<div class="time-cell passed">8</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="8">
+<div class="step-ref passed">8</div>
+<div class="step-cell passed">When method get</div>
+</div>
+<div class="time-cell passed">1023</div>
+</div>
+<div class="preformatted" data-parent="8">18:36:33.967 request:
+1 &gt; GET https://10.0.0.60:8089/services/alerts/fired_alerts
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Authorization: Basic cGFsbWV0b2FkbWluOlBAbG1ldG9AMTIz
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: 10.0.0.60:8089
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_251)
+
+18:36:34.631 response time in milliseconds: 652.28
+1 &lt; 200
+1 &lt; Cache-Control: no-store, no-cache, must-revalidate, max-age=0
+1 &lt; Connection: Keep-Alive
+1 &lt; Content-Type: text/xml; charset=UTF-8
+1 &lt; Date: Thu, 03 Jun 2021 13:07:07 GMT
+1 &lt; Expires: Thu, 26 Oct 1978 00:00:00 GMT
+1 &lt; Server: Splunkd
+1 &lt; Vary: Accept-Encoding, Cookie, Authorization
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; X-Frame-Options: SAMEORIGIN
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!--This is to override browser formatting; see server.conf[httpServer] to disable. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .--&gt;
+&lt;?xml-stylesheet type="text/xml" href="/static/atom.xsl"?&gt;
+&lt;feed xmlns="http://www.w3.org/2005/Atom" xmlns:s="http://dev.splunk.com/ns/rest" xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/"&gt;
+  &lt;title&gt;alerts&lt;/title&gt;
+  &lt;id&gt;https://10.0.0.60:8089/services/alerts/fired_alerts&lt;/id&gt;
+  &lt;updated&gt;2021-06-03T18:37:07+05:30&lt;/updated&gt;
+  &lt;generator build="e053ef3c985f" version="8.2.0"/&gt;
+  &lt;author&gt;
+    &lt;name&gt;Splunk&lt;/name&gt;
+  &lt;/author&gt;
+  &lt;opensearch:totalResults&gt;1&lt;/opensearch:totalResults&gt;
+  &lt;opensearch:itemsPerPage&gt;30&lt;/opensearch:itemsPerPage&gt;
+  &lt;opensearch:startIndex&gt;0&lt;/opensearch:startIndex&gt;
+  &lt;s:messages/&gt;
+  &lt;entry&gt;
+    &lt;title&gt;-&lt;/title&gt;
+    &lt;id&gt;https://10.0.0.60:8089/servicesNS/palmetoadmin/search/alerts/fired_alerts/-&lt;/id&gt;
+    &lt;updated&gt;1970-01-01T05:30:00+05:30&lt;/updated&gt;
+    &lt;link href="/servicesNS/palmetoadmin/search/alerts/fired_alerts/-" rel="alternate"/&gt;
+    &lt;author&gt;
+      &lt;name&gt;palmetoadmin&lt;/name&gt;
+    &lt;/author&gt;
+    &lt;link href="/servicesNS/palmetoadmin/search/alerts/fired_alerts/-" rel="list"/&gt;
+    &lt;content type="text/xml"&gt;
+      &lt;s:dict&gt;
+        &lt;s:key name="eai:acl"&gt;
+          &lt;s:dict&gt;
+            &lt;s:key name="app"&gt;search&lt;/s:key&gt;
+            &lt;s:key name="can_list"&gt;1&lt;/s:key&gt;
+            &lt;s:key name="can_write"&gt;1&lt;/s:key&gt;
+            &lt;s:key name="modifiable"&gt;0&lt;/s:key&gt;
+            &lt;s:key name="owner"&gt;palmetoadmin&lt;/s:key&gt;
+            &lt;s:key name="perms"&gt;
+              &lt;s:dict&gt;
+                &lt;s:key name="read"&gt;
+                  &lt;s:list&gt;
+                    &lt;s:item&gt;*&lt;/s:item&gt;
+                  &lt;/s:list&gt;
+                &lt;/s:key&gt;
+                &lt;s:key name="write"&gt;
+                  &lt;s:list&gt;
+                    &lt;s:item&gt;*&lt;/s:item&gt;
+                  &lt;/s:list&gt;
+                &lt;/s:key&gt;
+              &lt;/s:dict&gt;
+            &lt;/s:key&gt;
+            &lt;s:key name="removable"&gt;0&lt;/s:key&gt;
+            &lt;s:key name="sharing"&gt;user&lt;/s:key&gt;
+          &lt;/s:dict&gt;
+        &lt;/s:key&gt;
+        &lt;s:key name="triggered_alert_count"&gt;0&lt;/s:key&gt;
+      &lt;/s:dict&gt;
+    &lt;/content&gt;
+  &lt;/entry&gt;
+&lt;/feed&gt;</div>
+<div class="step-row">
+<div class="step-container" id="9">
+<div class="step-ref passed">9</div>
+<div class="step-cell passed">Then status 200</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="10">
+<div class="step-ref passed">10</div>
+<div class="step-cell passed">* def res = get response /feed/entry/content/dict/key/dict/key[@name='app']</div>
+</div>
+<div class="time-cell passed">12</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="11">
+<div class="step-ref passed">11</div>
+<div class="step-cell passed">* def res1 = get response //dict/key[@name='app']</div>
+</div>
+<div class="time-cell passed">8</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="12">
+<div class="step-ref passed">12</div>
+<div class="step-cell passed">* print res</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="preformatted" data-parent="12">18:36:34.665 [print] search</div>
+<div class="step-row">
+<div class="step-container" id="13">
+<div class="step-ref passed">13</div>
+<div class="step-cell passed">* match res == "search"</div>
+</div>
+<div class="time-cell passed">9</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="14">
+<div class="step-ref passed">14</div>
+<div class="step-cell passed">* print res1</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="preformatted" data-parent="14">18:36:34.676 [print] search</div>
+</div>
+</div>
+    
+</div>   
+  
+</body>
+
+</html>

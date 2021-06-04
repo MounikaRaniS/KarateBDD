@@ -1,0 +1,13 @@
+<testsuite failures="0" name="src/test/java/com/wellsfargo/featurefiles/Karate23.kafka_2.feature" skipped="0" tests="1" time="1.53777">
+  <testcase classname="src.test.java.com.wellsfargo.featurefiles.Karate23.kafka_2" name="Producing Topic" time="1.53777">
+    <system-out>Given url "http://10.0.0.60:8082" ......................................... passed
+Given path "/topics/Mounika_topic" ........................................ passed
+And request ............................................................... passed
+And header Content-Type = "application/vnd.kafka.json.v2+json" ............ passed
+And header Accept = "application/vnd.kafka.v2+json" ....................... passed
+When method post .......................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* match response.offsets[1].partition == 0 ................................ passed</system-out>
+  </testcase>
+</testsuite>

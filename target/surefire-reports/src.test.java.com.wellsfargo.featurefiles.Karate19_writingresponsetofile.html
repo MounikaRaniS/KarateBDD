@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+<meta charset="utf-8">
+    
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    
+<link href="res/bootstrap.min.css" rel="stylesheet" type="text/css">
+    
+<link href="res/karate-report.css" rel="stylesheet" type="text/css">
+    
+<link href="favicon.ico" rel="shortcut icon">
+    
+<script src="res/jquery.min.js" type="text/javascript"></script>
+    <script src="res/jquery.tablesorter.min.js" type="text/javascript"></script>
+    <script src="res/bootstrap.min.js" type="text/javascript"></script>
+    <script src="res/karate-report.js" type="text/javascript"></script>
+    
+<title>src.test.java.com.wellsfargo.featurefiles.Karate19_writingresponsetofile</title>
+  
+</head>
+  
+<body>
+    
+<div id="root-container">
+      
+<div id="leftnav">
+        
+<div class="nav-logo">
+          
+<a href="karate-summary.html">
+            <img alt="Karate" src="res/karate-logo.svg">
+          </a>
+          
+<div class="nav-count">
+            
+<div class="bg-success" id="nav-pass">0</div>
+            
+<div class="bg-danger" id="nav-fail">2</div>
+          
+</div>
+        
+</div>
+        
+<div id="nav-type">Scenarios</div>         
+        
+<div id="nav-date">2021-06-03 05:37:27 PM</div>        
+      
+<div class="nav-container">
+<div class="nav-item failed">
+<a href="#[1:4]">[1:4] writing response to file TestCase 1 This is for writing response to file test case1</a>
+</div>
+<div class="nav-item failed">
+<a href="#[2:14]">[2:14] reading response from file TestCase 2 This is for reading response from file test case2</a>
+</div>
+</div>
+</div>
+      
+<div id="content">
+      
+<div class="page-heading alert alert-primary">
+<a href="karate-summary.html">Summary</a><span class="feature-label">|</span><a href="karate-tags.html">Tags</a><span class="feature-label">|</span><span class="feature-label">Feature:</span><span class="feature-name">src/test/java/com/wellsfargo/featurefiles/Karate19_writingresponsetofile.feature</span><span class="feature-description">Karate Test Suite 19 | This test suite for writing content into file</span>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[1:4]">
+<div class="heading-container">
+<div class="scenario-tags"></div>
+<span class="scenario-keyword">Scenario: [1:4]</span><span class="scenario-name">writing response to file TestCase 1 This is for writing response to file test case1</span>
+</div>
+<div class="scenario-time failed">ms: 45</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="1">
+<div class="step-ref failed">1</div>
+<div class="step-cell failed">* def util = Java.type('com.wellsfargo.utils.Karate19');</div>
+</div>
+<div class="time-cell failed">45</div>
+</div>
+<div class="preformatted" data-parent="1">17:37:26.230 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js
+Karate19_writingresponsetofile.feature:7 - evaluation (js) failed: Java.type('com.wellsfargo.utils.Karate19');, java.lang.RuntimeException: java.lang.ClassNotFoundException: com.wellsfargo.utils.Karate19
+stack trace: jdk.nashorn.internal.runtime.ScriptRuntime.apply(ScriptRuntime.java:397)</div>
+<div class="step-row">
+<div class="step-container" id="2">
+<div class="step-ref skipped">2</div>
+<div class="step-cell skipped">Given url "https://jsonplaceholder.typicode.com/posts/1"</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="3">
+<div class="step-ref skipped">3</div>
+<div class="step-cell skipped">When method get</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="4">
+<div class="step-ref skipped">4</div>
+<div class="step-cell skipped">Then status 200</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="5">
+<div class="step-ref skipped">5</div>
+<div class="step-cell skipped">* def result = get response</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="6">
+<div class="step-ref skipped">6</div>
+<div class="step-cell skipped">* util.writeToFile("src/test/resources/test.json", result);</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[2:14]">
+<div class="heading-container">
+<div class="scenario-tags"></div>
+<span class="scenario-keyword">Scenario: [2:14]</span><span class="scenario-name">reading response from file TestCase 2 This is for reading response from file test case2</span>
+</div>
+<div class="scenario-time failed">ms: 17</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="7">
+<div class="step-ref failed">7</div>
+<div class="step-cell failed">* def fileResponse = read('classpath:test.json')</div>
+</div>
+<div class="time-cell failed">17</div>
+</div>
+<div class="preformatted" data-parent="7">17:37:26.362 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js
+Karate19_writingresponsetofile.feature:17 - could not find or read file: classpath:test.json</div>
+<div class="step-row">
+<div class="step-container" id="8">
+<div class="step-ref skipped">8</div>
+<div class="step-cell skipped">* print fileResponse</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+</div>
+</div>
+    
+</div>   
+  
+</body>
+
+</html>

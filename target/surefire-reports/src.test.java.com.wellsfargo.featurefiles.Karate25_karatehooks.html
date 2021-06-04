@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+<meta charset="utf-8">
+    
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    
+<link href="res/bootstrap.min.css" rel="stylesheet" type="text/css">
+    
+<link href="res/karate-report.css" rel="stylesheet" type="text/css">
+    
+<link href="favicon.ico" rel="shortcut icon">
+    
+<script src="res/jquery.min.js" type="text/javascript"></script>
+    <script src="res/jquery.tablesorter.min.js" type="text/javascript"></script>
+    <script src="res/bootstrap.min.js" type="text/javascript"></script>
+    <script src="res/karate-report.js" type="text/javascript"></script>
+    
+<title>src.test.java.com.wellsfargo.featurefiles.Karate25_karatehooks</title>
+  
+</head>
+  
+<body>
+    
+<div id="root-container">
+      
+<div id="leftnav">
+        
+<div class="nav-logo">
+          
+<a href="karate-summary.html">
+            <img alt="Karate" src="res/karate-logo.svg">
+          </a>
+          
+<div class="nav-count">
+            
+<div class="bg-success" id="nav-pass">1</div>
+            
+<div class="bg-danger" id="nav-fail">0</div>
+          
+</div>
+        
+</div>
+        
+<div id="nav-type">Scenarios</div>         
+        
+<div id="nav-date">2021-06-04 03:18:42 PM</div>        
+      
+<div class="nav-container">
+<div class="nav-item passed">
+<a href="#[1:19]">[1:19] Karate Hooks TC 1 </a>
+</div>
+</div>
+</div>
+      
+<div id="content">
+      
+<div class="page-heading alert alert-primary">
+<a href="karate-summary.html">Summary</a><span class="feature-label">|</span><a href="karate-tags.html">Tags</a><span class="feature-label">|</span><span class="feature-label">Feature:</span><span class="feature-name">src/test/java/com/wellsfargo/featurefiles/Karate25_karatehooks.feature</span><span class="feature-description">Kafka Test Suite 25 | Using scenario and feature level test fixture (Karate Hooks)</span>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[1:19]">
+<div class="heading-container">
+<div class="scenario-tags"></div>
+<span class="scenario-keyword">Scenario: [1:19]</span><span class="scenario-name">Karate Hooks TC 1 </span>
+</div>
+<div class="scenario-time passed">ms: 33</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="[1:19]bg">
+<div class="step-ref bg-step">&gt;&gt;</div>
+<div class="step-cell passed">Background:</div>
+</div>
+<div class="time-cell passed"></div>
+</div>
+<div class="step-row" data-parent="[1:19]bg">
+<div class="step-container" id="1">
+<div class="step-ref bg-step">1</div>
+<div class="step-cell passed">* print "From background block"</div>
+</div>
+<div class="time-cell passed">13</div>
+</div>
+<div class="preformatted" data-parent="1">15:18:41.344 From karate-config file 
+15:18:41.718 [print] From background block</div>
+<div class="step-row" data-parent="[1:19]bg">
+<div class="step-container">
+<div class="step-ref bg-step"></div>
+<div class="step-cell comment">#    * configure afterScenario =</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row" data-parent="[1:19]bg">
+<div class="step-container">
+<div class="step-ref bg-step"></div>
+<div class="step-cell comment">#     """</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row" data-parent="[1:19]bg">
+<div class="step-container">
+<div class="step-ref bg-step"></div>
+<div class="step-cell comment">#      function (){</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row" data-parent="[1:19]bg">
+<div class="step-container">
+<div class="step-ref bg-step"></div>
+<div class="step-cell comment">#      karate.log("from after scenario")</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row" data-parent="[1:19]bg">
+<div class="step-container">
+<div class="step-ref bg-step"></div>
+<div class="step-cell comment">#      }</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row" data-parent="[1:19]bg">
+<div class="step-container">
+<div class="step-ref bg-step"></div>
+<div class="step-cell comment">#     """</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row" data-parent="[1:19]bg">
+<div class="step-container" id="2">
+<div class="step-ref bg-step">2</div>
+<div class="step-cell passed">* configure afterFeature =</div>
+</div>
+<div class="time-cell passed">12</div>
+</div>
+<div class="preformatted" data-parent="2">function (){
+karate.log("from after feature")
+}</div>
+<div class="step-row">
+<div class="step-container" id="3">
+<div class="step-ref passed">3</div>
+<div class="step-cell passed">* print "From scenario block"</div>
+</div>
+<div class="time-cell passed">8</div>
+</div>
+<div class="preformatted" data-parent="3">15:18:41.747 [print] From scenario block15:18:41.760 after scenario inside config</div>
+</div>
+</div>
+    
+</div>   
+  
+</body>
+
+</html>
